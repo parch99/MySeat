@@ -1,0 +1,780 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Lobster&family=Patua+One&family=Rubik:wght@300&family=Sniglet&display=swap');
+
+* {
+   box-sizing: border-box;
+}
+
+header,
+section {
+   overflow-x: hidden
+}
+
+:root {
+   --Sniglet-font: "Sniglet", cursive;
+   --Rubik: "Rubik", cursive;
+   --Patua: "Patua One", cursive;
+   --Lobster: "Lobster", cursive;
+   --light-black: #2e2c2caf;
+   --bggradient: linear-gradient(to bottom, #dd2476, #ff512f);
+   --reversebggradient: linear-gradient(to bottom, #ff512f, #dd2476);
+   --light-gray: rgba(255, 255, 255, 0.87);
+}
+
+header a {
+   font-family: var(--Sniglet-font);
+   font-size: 0.9em;
+   color: whitesmoke;
+}
+
+header {
+   background: #dd2476;
+   background: var(--bggradient);
+}
+
+header .nav-item {
+   padding: 0.9em;
+}
+
+header .navbar-brand {
+   padding-left: 8rem;
+}
+
+header .nav-link:hover {
+   color: black;
+}
+
+header .row .col-md-5 {
+   padding: 4.2vmin 1vmin;
+}
+
+header .row .col-md-7 {
+   padding: 22vmin 1vmin;
+   padding-bottom: 10vmin;
+   font-family: var(--Rubik);
+}
+
+header .row .col-md-5 img {
+   width: 100%;
+   height: 100%;
+}
+
+main header .container .col-md-7 h6 {
+   padding: 1vmin;
+   letter-spacing: 0.5em;
+   color:whitesmoke;
+}
+
+main header .container .col-md-7 h1 {
+   font-size: 8vmin;
+   font-weight: bold;
+   color: whitesmoke;
+}
+
+main header .container .col-md-7 button {
+   margin-top: 7vmin;
+   border-radius: 30px;
+   font-weight: bold;
+}
+
+/* section 1 */
+.section-1 {
+   padding: 15vmin 0;
+}
+
+.section-1 .row .col-md-6 .city img {
+   width: 70%;
+   border-radius: 0.2em;
+}
+
+.section-1 .row .col-md-6 .panel {
+   position: absolute;
+   background: white;
+   top: 13vmin;
+   left: -29vmin;
+   border-radius: 3px;
+   text-align: left;
+   padding: 8vmin 6vmin 13vmin 10vmin;
+   box-shadow: 0px 25px 42px rgba(0, 0, 0, 0.2);
+   font-family: var(--Rubik);
+   z-index: 1;
+}
+
+.section-1 .row .col-md-6 h1 {
+   font-weight: bold;
+   padding: 0.4em 0;
+   font-size: 2em;
+}
+
+.section-1 .row .col-md-6>p {
+   font-size: 1em;
+   color: rgba(0, 0, 0, 0.7);
+}
+
+/* section 1 */
+
+/* section 3 */
+.section-3 {
+   height: 70vmin;
+   margin-top: 15vmin;
+   background: var(--bggradient);
+}
+
+.section-3 .row .col-md-12 h1 {
+   padding: 2em 0 0.5em 0;
+   color: whitesmoke;
+   font-size: 6vmin;
+}
+
+.section-3 .col-md-12>p {
+   padding: 0.4em 2em;
+   padding-bottom: 2em;
+   color: var(--light-gray);
+   font-size: 3vmin;
+}
+
+.section-3 .desktop {
+   background: white;
+   display: inline-block;
+   border-radius: 3em;
+   padding: 2vmin 4.5vmin;
+   margin: 1em;
+}
+
+.section-3 .desktop h3 {
+   font-size: 4vmin;
+}
+
+.section-3 .desktop p {
+   font-size: 2vmin;
+}
+
+/* section 3 */
+
+/* Footer */
+footer {
+   background: rgba(0, 0, 0, 0.75);
+   overflow-x: hidden;
+   padding: 14vmin 18vmin;
+}
+
+footer p>span {
+   color: #ff512f;
+}
+
+footer input {
+   border: none !important;
+}
+
+footer input:placeholder {
+   color: white;
+}
+
+footer .input-group .input-group-text {
+   background: var(--bggradient);
+   border: none;
+}
+
+footer .coloumn i {
+   color: #dd2476;
+}
+
+footer .coloumn i+i {
+   padding: 0 0.15em;
+}
+
+footer .btn {
+   line-height: 0.5px;
+}
+
+/* Footer */
+
+/* ABOUT PAGE */
+.about .section-4 {
+   height: 35vmin;
+   background-color: #e22803;
+}
+
+.about .section-4 .row .col-md-12>h2 {
+   color: whitesmoke;
+   padding-top: 5.5vmin;
+}
+
+.about .section-4 .row .col-md-12>p {
+   color: whitesmoke;
+   font-size: 2.9vmin;
+   font-weight: bold;
+   padding: 4vmin 21vmin;
+}
+
+.about .section-5 .row .col-md-12>p {
+   font-size: 3vmin;
+   padding: 13vmin 25vmin;
+}
+
+/* ABOUT PAGE */
+
+/* HOMEUSER PAGE */
+header .homeUser,
+.homeUser1 {
+   overflow-x: hidden
+}
+
+main .homeUser .list_button {
+   padding-top: 30px;
+   padding-bottom: 50px;
+}
+main .homeUser {
+   background: var(--bggradient);
+}
+main .homeUser p{
+   color: whitesmoke;
+}
+main .homeUser h1{
+   color: whitesmoke;
+}
+main .homeUser .list_button .venues_button {
+   border-radius: 30px;
+   font-weight: bold;
+   color: black;
+   border: none;
+   background-color: rgb(245, 245, 245);
+   font-size: 16px;
+   cursor: pointer;
+   display: inline-block;
+   padding: 10px 50px 10px 50px;
+}
+
+.homeUser1 .Title {
+   font-family: var(--Sniglet-font);
+   font-size: 2em;
+   color: #dd2476;
+   text-align: center;
+   padding: 10px;
+   margin: 20px;
+}
+
+.homeUser1 .recents {
+   font-family: var(--Sniglet-font);
+   font-size: 1.5em;
+   color: #dd2476;
+   text-align: center;
+   background-color: whitesmoke;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   padding: 10px;
+   margin: 20px;
+   border-radius: 25px;
+}
+
+.homeUser1 .recents .venueName {
+   padding: 5px;
+}
+
+.homeUser1 .recents .rating {
+   padding: 5px;
+}
+
+.homeUser1 .recents .review .fa-comment-o {
+   color: #2e2c2caf;
+}
+
+.homeUser1 .empty {
+   color: lightgray;
+}
+
+.homeUser1 input[type="submit"] {
+   border-radius: 30px;
+   font-weight: bold;
+   color: #dd2476;
+   border-color: #dd2476;
+   background-color: whitesmoke;
+   font-size: 16px;
+   cursor: pointer;
+   display: inline-block;
+   padding: 10px;
+}
+
+.homeUser1 input[type="datetime-local"] {
+   border-radius: 30px;
+   color: #dd2476;
+   border-color: #dd2476;
+   background-color: whitesmoke;
+   cursor: pointer;
+   display: inline-block;
+   margin-bottom: 10px;
+}
+
+/* HOMEUSER PAGE */
+
+/* HOMEOWNER PAGE */
+header .cssOwner,
+.cssOwner1 {
+   overflow-x: hidden
+}
+
+header .cssOwner .row .col-md-12 {
+   padding: 2vmin 1vmin;
+   padding-bottom: 3vmin;
+   font-family: var(--Rubik);
+}
+
+header .cssOwner .container .col-md-12 button {
+   border-radius: 30px;
+   font-weight: bold;
+}
+
+.cssOwner1 .cssOwner {
+   background: linear-gradient(to bottom, #dd2476, #ff512f);
+   padding: 10px;
+   text-align: center;
+}
+
+.cssOwner1 .cssOwner .btn {
+   padding: 10px;
+   margin: 10px;
+}
+
+.cssOwner1 .reservation {
+   font-family: var(--Sniglet-font);
+   font-size: 1.5em;
+   color: whitesmoke;
+   background: linear-gradient(to bottom, #dd2476, #ff512f);
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   padding: 10px 10px 10px 30px;
+   margin: 20px;
+   border-radius: 25px;
+}
+
+.cssOwner1 .reservation .userpic {
+   height: 25px;
+   width: 25px;
+   margin-bottom: 5px;
+}
+
+.cssOwner1 .reservation_button {
+   font-family: var(--Sniglet-font);
+   font-size: 1.5em;
+   color: whitesmoke;
+   text-align: center;
+   background: linear-gradient(to bottom, #dd2476, #ff512f);
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   padding: 10px;
+   margin: 20px;
+   border-radius: 25px;
+}
+
+.cssOwner1 .reservation_button .accept {
+   border-radius: 30px;
+   font-weight: bold;
+   color: black;
+   border: none;
+   background-color: whitesmoke;
+   font-size: 16px;
+   cursor: pointer;
+   display: inline-block;
+   padding: 5px;
+   margin-left: 20px;
+   margin-right: 20px;
+}
+
+.cssOwner1 .reservation_button .decline {
+   border-radius: 30px;
+   font-weight: bold;
+   color: black;
+   border: none;
+   background-color: whitesmoke;
+   font-size: 16px;
+   cursor: pointer;
+   display: inline-block;
+   padding: 5px;
+   margin-left: 20px;
+   margin-right: 20px;
+}
+
+.cssOwner1 .Title {
+   font-family: var(--Sniglet-font);
+   font-size: 2em;
+   color: #dd2476;
+   text-align: center;
+   padding: 10px;
+   margin: 20px;
+}
+
+.cssOwner1 .reviews {
+   font-family: var(--Sniglet-font);
+   font-size: 1.5em;
+   color: #dd2476;
+   text-align: center;
+   background-color: whitesmoke;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   padding: 10px;
+   margin: 20px;
+   border-radius: 25px;
+}
+
+.cssOwner1 .reviews .userpic {
+   height: 25px;
+   width: 25px;
+   margin-bottom: 5px;
+}
+
+.cssOwner1 .reviews .reviewer {
+   padding-left: 20px;
+}
+
+.cssOwner1 .reviews .rating {
+   padding-right: 20px;
+}
+
+.cssOwner1 .reviews .review {
+   text-align: justify;
+   padding: 20px;
+}
+
+.cssOwner1 .reviews .review .fa-comment-o {
+   color: #2e2c2caf;
+}
+
+.cssOwner1 .empty {
+   color: lightgray;
+}
+
+.cssOwner1 #buttons{
+   box-shadow:inset 0px 1px 0px 0px #f5978e;
+   background-color:#dd2476;
+   border-radius:6px;
+   display:inline-block;
+   cursor:pointer;
+   color:#ffffff;
+   font-family: var(--Rubik);;
+   letter-spacing: 0.2em;
+   font-size:20px;
+   font-weight:bold;
+   padding:10px 20px;
+   text-decoration:none;
+   text-shadow:0px 1px 0px #8a0900;
+   margin-bottom: 50px;
+}
+
+.cssOwner1 #buttons:hover {
+   background:linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 5%, #992119 100%);
+   background-color:rgba(0, 0, 0, 0.75);
+}
+
+.cssOwner1 #buttons:active {
+   position:relative;
+   top:1px;
+}
+
+.cssOwner1 #buttons a:hover {
+   text-decoration: none;
+   text-decoration-color: white;
+}
+
+.cssOwner1 a, a:link, a:visited {
+   color: white;
+   text-decoration: none;
+}
+/* HOMEOWNER PAGE */
+
+/* Welcome PAGE */
+.page1 .section-1 {
+   background-color: white;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: 100% 100%;
+   padding: 12vmin 0;
+   height: 700px;
+}
+
+.page1 .section-1 .wrapper {
+   text-align: center;
+}
+
+.page1 #buttons li {
+   box-shadow:inset 0px 1px 0px 0px #f5978e;
+   background-color:#dd2476;
+   border-radius:6px;
+   display:inline-block;
+   cursor:pointer;
+   color:#ffffff;
+   font-family: var(--Rubik);;
+   letter-spacing: 0.2em;
+   font-size:22px;
+   font-weight:bold;
+   padding:8px 60px;
+   text-decoration:none;
+   text-shadow:0px 1px 0px #8a0900;
+}
+
+.page1 #buttons li:hover {
+   background:linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 5%, #992119 100%);
+   background-color:rgba(0, 0, 0, 0.75);
+}
+
+.page1 #buttons:active {
+   position:relative;
+   top:1px;
+}
+
+.page1 #buttons li a:hover {
+   text-decoration: none;
+   text-decoration-color: white;
+}
+
+.page1 a, a:link, a:visited {
+   color: white;
+   text-decoration: none;
+}
+
+.page1 .section-1>h1 {
+   color: #dd2476;
+   font-family: var(--Rubik);
+   font-size: 4.0em;
+   font-weight: bold;
+   margin-bottom: 80px;
+}
+/* Welcome PAGE */
+
+/* RESTAURANT PAGE */
+.money{
+   margin-top: 5vmin;
+   margin-bottom: 4vmin;
+}
+.stars{
+  margin-bottom: 3.3vmin;
+}
+.mapa{
+  margin-top: 33px;
+}
+.demo-bb{
+  margin-top: 50px;
+}
+.demo-bb > h1{
+   font-family: var(--Lobster);
+   font-size: 11vmin;
+   color: #dd2476;
+ }
+.demo-bg{
+  background:#dd2476;
+  margin-top: 80px;
+  margin-bottom: 100px;
+  }
+.pull-right{
+  float: right;
+}
+.business-hours {
+background: #222; 
+padding: 40px 14px;
+margin-top: -15px;
+position: relative;
+}
+.business-hours:before{
+  content: '';
+  width: 23px;
+  height: 23px;
+  background: #111;
+  position: absolute;
+  top: 5px;
+  left: -12px;
+  transform: rotate(-45deg);
+  z-index: -1;
+}
+.business-hours .title {
+  font-size: 20px;
+  color: whitesmoke;
+  text-transform: uppercase;
+  padding-left: 5px;
+  border-left: 4px solid #dd2476; 
+}
+.business-hours li {
+  color: whitesmoke;
+  line-height: 30px;
+  border-bottom: 1px solid #333; 
+}
+.business-hours li:last-child {
+border-bottom: none; 
+}
+.business-hours .pull-right{
+  margin-left: 15vmin;
+  text-align: left;
+}
+.demo-bg .row .col-sm-4 .logo img{
+  margin-top: -25vmin;
+}
+.container .row .col-sm-4 .email button{
+  border-radius: 30px;
+  font-weight: bold;
+  margin-bottom: 1vmin;
+  cursor: default;
+}
+.setReview {
+  font-family: var(--Sniglet-font);
+  font-size: 1.5em;
+  color: #dd2476;
+  text-align: left;
+  background-color: whitesmoke;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 25px;
+}
+.uReviews a{
+  color: #dd2476;
+  border-radius: 30px;
+  font-weight: bold;
+  margin-bottom: 12vmin;
+  text-align: center;
+}
+.uReviews p{
+   font-family: var(--Sniglet-font);
+   font-size: 2em;
+   color: #dd2476;
+   text-align: center;
+   padding: 10px;
+   margin: 20px;
+ }
+.reviews {
+  font-family: var(--Sniglet-font);
+  font-size: 1.5em;
+  color: #dd2476;
+  background-color: whitesmoke;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px 15px 15px 15px;
+  margin: 20px;
+  border-radius: 25px;
+}
+.reviews .userpic {
+  height: 25px;
+  width: 25px;
+  margin-bottom: 5px;
+}
+.reviews .reviewer {
+  padding-left: 20px;
+}
+.reviews .rating {
+  padding-right: 20px;
+}
+.reviews .moneyRating {
+  padding-right: 20px;
+}
+.reviews .review{
+  text-align: justify;
+  padding: 10px;
+}
+.empty{
+  color: lightgray;
+}
+
+
+/* RESTAURANT PAGE */
+
+/*RESTAURANT LIST */
+
+.RestaurantList .section-1 {
+   background-color: white;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: 100% 100%;
+   padding: 5px;
+   position: relative;
+}
+
+.RestaurantList .wrapper {
+   text-align: center;
+}
+
+.RestaurantList h1 {
+   position: relative;
+   color: #dd2476;
+   font-family: var(--Rubik);
+   font-size: 6vw;
+   font-weight: bold;
+   margin-bottom: 14vmin;
+   margin-top: 8vmin;
+}
+
+.RestaurantList .restaurants {
+   position: relative;
+}
+
+.RestaurantList .restaurant {
+   position: center;
+   height: 100px;
+   background-color: #dd2476;
+   padding: 10px;
+   margin-bottom: 40px;
+}
+
+.RestaurantList .slika {
+   height: 80px;
+   
+   margin-right: 1.5vmin;
+}
+
+.RestaurantList .text {
+   font-size: 23px;
+   color: whitesmoke;
+   padding: 0px;
+   text-overflow: ellipsis;
+}
+
+.RestaurantList .text:hover {
+   color: black;
+}
+
+.RestaurantList .sub-text {
+   font-size: 14px;
+   color: whitesmoke;
+   margin: 0px;
+   padding: 0px;
+   text-overflow: ellipsis;
+}
+
+.RestaurantList .checked {
+   color: orange;
+}
+
+.RestaurantList .restaurant-link:hover {
+   color: black;
+   text-decoration: none;
+}
+
+.RestaurantList .comment {
+   padding: 1px 20px;
+   background-color: #ffa0cb;
+   border-radius: 0.5vmin;
+}
+
+/*RESTAURANT LIST */
+
+/*CREATE NEW VENUE*/
+.venue .image-preview {
+   width: 300px;
+   min-height: 100px;
+   border: 2px solid #dddddd;
+   margin-top: 15px;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-weight: bold;
+   color: #cccccc;
+}
+
+.venue .image-preview__image {
+   display: none;
+   width: 100%;
+}
+
+.venue .text-center {
+   margin-top: 30px;
+   font-family: var(--Rubik);
+   font-weight: bolder;
+}
+
+.venue .form-group {
+   font-family: var(--Rubik);
+   font-weight: bold;
+}
+/*CREATE NEW VENUE*/

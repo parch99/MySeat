@@ -1,0 +1,252 @@
+<body>
+    <div class="eachrestname container-fluid text-center">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <h1>{{lokacija.naziv}}</h1>
+                <p>At nam docendi indoctum efficiantur. Minim inciderint in il id, veniam</p>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="container demo-bg">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h4 class="money text-center"> 
+                        <span class="text-warning"><app-evrice [cost]="lokacija.cost"></app-evrice></span>
+                    </h4>
+                    <div class="email text-center">
+                        <a href="#"><button class="btn btn-light px-5 py-2 primary-btn">Call {{lokacija.number}}</button></a>
+                    </div>
+                    <div class="email text-center">
+                        <a href="/lokacija/{{lokacija._id}}/order/nov"><button class="btn btn-light px-5 py-2 primary-btn">Make a reservation</button></a>
+                    </div>
+                    <h4 class="stars text-warning text-center">
+                        <app-zvezdice [ocena]="lokacija.ocena"></app-zvezdice>
+                    </h4>
+                     <div class="email text-center" style="color: whitesmoke; font-weight: bold">
+                        <h5>Address: {{lokacija.naslov}}</h5>
+                    </div>
+                </div>
+                <div class="col-sm-4" *ngIf="jePovezava()">
+                    <div class="mapa embed-responsive embed-responsive-4by3">
+                        <iframe [src]="('https://maps.google.com/maps?q=' + lokacija.koordinate[1] + ',' + lokacija.koordinate[0] + '&z=15&output=embed') | dovoliUrl"></iframe>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="business-hours">
+                        <h2 class="title">Working Hours</h2>
+                        <ul class="list-unstyled opening-hours" *ngFor="let l of lokacija.WorkingHours[0] | keyvalue: originalOrder">
+                            <li>{{l.key | izbrisiId}}<span class="pull-right">{{l.value | izbrisiId}}</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div [ngSwitch]="jePrijavljen()">
+            <div class="buttons text-center">
+                <button (click)="obrazecZaPosodobitevLokacije=true" *ngSwitchCase="true" 
+                class="btn-hover color-6" [disabled]="!jePovezava()">Edit Location</button>
+                <button (click)="deleteL()" class="btn-hover color-6"
+                    [disabled]="!jePovezava()" *ngSwitchCase="true"  >Delete Location</button>
+                <button routerLink="/prijava" class="btn-hover color-6"
+                    [disabled]="!jePovezava()" *ngSwitchDefault>Sign in to Delete Location</button>
+                <button routerLink="/prijava" *ngSwitchDefault class="btn-hover color-6"
+                    [disabled]="!jePovezava()">Sign in to edit</button>
+            </div>
+            <div *ngIf="obrazecZaPosodobitevLokacije"><br><br>
+                <form class="container" (ngSubmit)="posodobiL()" style="width:50%;"><br>
+    
+                    <div *ngIf="obrazecNapaka" class="alert alert-danger" role="alert">
+                    {{ obrazecNapaka }}
+                    </div>
+    
+                    <div class="form-group">
+                        <label class="col-form-label" for="naziv">Restaurant name:</label>
+                        <div>
+                            <input [(ngModel)]="posodobitev.naziv" id="naziv" name="naziv" class="form-control"
+                            style="box-shadow: 0 4px 7px 0 rgb(255, 0, 76);" placeholder="Restaurant name">
+                        </div>
+                    </div>
+    
+                    <div class="form-group">
+                        <label class="col-form-label" for="naslov">Restaurant address:</label>
+                        <div>
+                            <input [(ngModel)]="posodobitev.naslov" id="naslov" name="naslov" class="form-control"
+                            style="box-shadow: 0 4px 7px 0 rgb(255, 0, 76);" placeholder="Resturant address">
+                        </div>
+                    </div>
+    
+                    <div class="form-group">
+                        <label class="col-form-label" for="koordinatelng">Coordinates Longitude:</label>
+                        <div>
+                            <input [(ngModel)]="posodobitev.koordinatelng" id="koordinatelng" name="koordinatelng" 
+                            style="box-shadow: 0 4px 7px 0 rgb(255, 0, 76);"class="form-control" placeholder="Example 15.123032">
+                        </div>
+                    </div>
+    
+                    <div class="form-group">
+                        <label class="col-form-label" for="koordinatelat">Coordinates Latitude:</label>
+                        <div>
+                            <input [(ngModel)]="posodobitev.koordinatelat" id="koordinatelat" name="koordinatelat" 
+                            style="box-shadow: 0 4px 7px 0 rgb(255, 0, 76);"class="form-control" placeholder="Example 46.123032">
+                        </div>
+                    </div>
+    
+                    <div class="form-group">
+                        <label class="col-form-label" for="mondayfriday">Working Hours Monday - Friday:</label>
+                        <div>
+                            <input [(ngModel)]="posodobitev.mondayfriday" id="mondayfriday" name="mondayfriday" 
+                            style="box-shadow: 0 4px 7px 0 rgb(255, 0, 76);"class="form-control"placeholder="11:00 - 23:00">
+                        </div>
+                    </div>
+    
+                    <div class="form-group">
+                        <label class="col-form-label" for="saturday">Working Hours Saturday:</label>
+                        <div>
+                            <input [(ngModel)]="posodobitev.saturday" id="saturday" name="saturday" 
+                            style="box-shadow: 0 4px 7px 0 rgb(255, 0, 76);"class="form-control" placeholder="12:00 - 23:00">
+                        </div>
+                    </div>
+    
+                    <div class="form-group">
+                        <label class="col-form-label" for="sunday">Working Hours Sunday:</label>
+                        <div>
+                            <input [(ngModel)]="posodobitev.sunday" id="sunday" name="sunday" 
+                            style="box-shadow: 0 4px 7px 0 rgb(255, 0, 76);"class="form-control"placeholder="12:00 - 23:00 or closed">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label" for="phone">Phone number:</label>
+                        <div>
+                            <input [(ngModel)]="posodobitev.phone" class="form-control" id="phone" placeholder="069 123 456" 
+                            style="box-shadow: 0 4px 7px 0 rgb(255, 0, 76);"name="phone" pattern="[0-9]{3} [0-9]{3} [0-9]{3}" required>
+                        </div><small>Format: 069 123 456</small>
+                    </div><br>
+
+                    <div class="form-group">
+                        <button class="btn btn-outline-danger px-5 py-2 float-right">Make Changes</button>
+                        <button (click)="obrazecZaPosodobitevLokacije=false" class="btn btn-outline-danger px-5 py-2 float-right">Cancel</button><br><br><br><br>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="uReviews" [ngSwitch]="jePrijavljen()">
+            <div class="buttons text-center">
+                <button (click)="obrazecPrikazan=true" *ngSwitchCase="true" class="btn-hover color-6" 
+                [disabled]="!jePovezava()">Add comment</button>
+                <button routerLink="/prijava" *ngSwitchDefault class="btn-hover color-6"
+                [disabled]="!jePovezava()">Sign in to comment</button>
+            </div>
+            <div class="container" *ngIf="obrazecPrikazan && jePovezava()">
+                <form (ngSubmit)="dodajNovKomentar()">
+                  <br>
+                  <br>
+
+                  <div *ngIf="obrazecNapaka" class="alert alert-danger" role="alert">
+                    {{ obrazecNapaka }}
+                  </div>
+              
+                  <div class="form-group">
+                      <label class="col-form-label" for="komentar">Add new comment</label>
+                      <div>
+                        <textarea [(ngModel)]="novKomentar.komentar" id="komentar" class="form-control" 
+                        style="box-shadow: 0 4px 7px 0 rgb(255, 0, 76);" name="komentar" rows="3"></textarea>
+                      </div>
+                  </div>
+              
+                  <div class="form-group">
+                    <label class="col-form-label" for="ocena">Your rate:</label>
+                    <div>
+                      <select  [(ngModel)]="novKomentar.ocena" id="ocena" name="ocena" class="form-control"
+                      style="box-shadow: 0 4px 7px 0 rgb(255, 0, 76);">
+                        <option [ngValue]="1">1</option>
+                        <option [ngValue]="2">2</option>
+                        <option [ngValue]="3">3</option>
+                        <option [ngValue]="4">4</option>
+                        <option [ngValue]="5">5</option>
+                    </select>
+                    </div>
+                  </div>
+              
+                  <div class="form-group">
+                    <label class="col-form-label" for="cost">Price (1 Cheap - 3 Expensive):</label>
+                    <div>
+                      <select [(ngModel)]="novKomentar.cost" id="cost" name="cost" class="form-control"
+                      style="box-shadow: 0 4px 7px 0 rgb(255, 0, 76);">
+                        <option [ngValue]="1">1</option>
+                        <option [ngValue]="2">2</option>
+                        <option [ngValue]="3">3</option>
+                    </select>
+                    </div>
+                  </div><br>
+
+                  <div class="form-group">
+                    <button class="btn btn-outline-danger px-5 py-2 float-right">Submit</button>
+                    <button (click)="obrazecPrikazan=false" class="btn btn-outline-danger px-5 py-2 float-right">Cancel</button><br><br><br><br>
+                  </div>
+                </form>
+            </div>
+            <p>User reviews:</p>
+        </div>
+        <div class="reviews" *ngFor="let komentar of lokacija.komentarji | najnovejsiNajprej">
+            <div class="row">
+                <div class="col-lg-8 col-md-12 text-lg-left text-center">
+                    <div class="reviewer">
+                        <p>
+                            <img class="userpic"
+                                src="https://i.pinimg.com/originals/0c/3b/3a/0c3b3adb1a7530892e55ef36d3be6cb8.png">
+                            <b>{{komentar.avtor}}</b>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 text-lg-right text-center">
+                    <p style="margin-right: 2vmin;"class="datum">{{komentar.datum | date : 'd. MMMM, yyyy'}}</p>
+                    <div class="rating">
+                        <app-zvezdice class="komentar-ocena" [ocena]="komentar.ocena"></app-zvezdice>
+                    </div>
+                </div>
+            </div>
+            <button (click)="deleteC(komentar._id)" class="btn btn-outline-danger btn-sm px-4 py-1 m-3 float-right">Delete</button>
+            <div>
+                <button (click)="obrazecPrikazanZaC=true"
+                class="btn btn-outline-danger btn-sm px-4 py-1 m-3 float-right">Edit Comment</button>
+            </div>
+            <div class="container" *ngIf="obrazecPrikazanZaC && jePovezava()">
+                <form (ngSubmit)="editC(komentar._id, ime)"><br><br>
+
+                  <div *ngIf="obrazecNapaka" class="alert alert-danger" role="alert">
+                    {{ obrazecNapaka }}
+                  </div>
+              
+                  <div class="form-group">
+                      <label class="col-form-label" for="komentar">Change comment</label>
+                      <div>
+                        <textarea [(ngModel)]="updateCpodatki.komentar" id="komentar" class="form-control" name="komentar" rows="3"></textarea>
+                      </div>
+                  </div>
+              
+                  <div class="form-group">
+                    <label class="col-form-label" for="ocena">Rating:</label>
+                    <div>
+                      <select  [(ngModel)]="updateCpodatki.ocena" id="ocena" name="ocena" class="form-control">
+                        <option [ngValue]="1">1</option>
+                        <option [ngValue]="2">2</option>
+                        <option [ngValue]="3">3</option>
+                        <option [ngValue]="4">4</option>
+                        <option [ngValue]="5">5</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <button class="btn btn-outline-danger px-5 py-2 float-right">Make Changes</button>
+                    <button (click)="obrazecPrikazanZaC=false" class="btn btn-outline-danger px-5 py-2 float-right">Cancel</button><br>
+                  </div>
+                </form>
+            </div>
+            <div class="review">{{komentar.besediloKomentarja}}</div>
+        </div>
+    </main>
+</body>

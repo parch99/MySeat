@@ -1,0 +1,119 @@
+<header>
+    <!-- Navigation -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" routerLink="">
+                <i class="fas fa-triangle"></i>
+                MySeat</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#NavbarMenu"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-align-left text-light"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="NavbarMenu">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active" *ngIf="!jePrijavljen()">
+                        <a class="nav-link" routerLink="">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active" *ngIf="jePrijavljen()">
+                        <a class="nav-link" routerLink="uporabnik/{{ vrniId() }}">My Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="seznam-lokacije">Resturant List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="map">Map</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="informacije">About Us</a>
+                    </li>
+                    <li class="nav-item" *ngIf="!jePovezava()">
+                        <a class="nav-link disabled"><i class="fas fa-exclamation-triangle ni-povezave"></i></a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active" *ngIf="!jePrijavljen()">
+                        <a routerLink="prijava" class="nav-link">Sign in</a>
+                    </li>
+
+                    <li class="nav-item dropdown" routerLinkActive="active" *ngIf="jePrijavljen()">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown">{{ vrniUporabnika() }}</a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" (click)="odjava()">Odjava</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- Navigation -->
+</header>
+<router-outlet></router-outlet>
+<footer>
+    <div class="container-fluid p-0">
+        <div class="row text-left">
+            <div class="col-md-5 col-md-5">
+                <h2 class="text-light">About Us</h2>
+                <p class="text-muted">
+                    Sorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt
+                </p>
+                <p class="pt-4 text-muted">
+                    © 2020 COPYRIGHT ALL RIGHTS RESERVED
+                    <span>SP</span>
+                </p>
+            </div>
+            <div class="col-md-5">
+                <h4 class="text-light">Newsletter</h4>
+                <p class="text-muted">Stay Updated</p>
+                <form (ngSubmit)="dodajNovEmail()" class="form-inline">
+                    <div class="col pl-0">
+                        <div *ngIf="obrazecUspesno" class="alert alert-success" role="alert">
+                            {{ obrazecUspesno }}
+                        </div>
+                        <div *ngIf="obrazecNapaka" class="alert alert-danger" role="alert">
+                            {{ obrazecNapaka }}
+                        </div>
+                        <label for="elektronskiNaslov"></label>
+                        <div class="input-group pr-5">
+                            <input [(ngModel)]="email.elektronskiNaslov" id="elektronskiNaslov" name="elektronskiNaslov" 
+                            class="form-control bg-dark text-white" placeholder="Email"> 
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <button type="button" data-toggle="modal" data-target="#exampleModalLong" class="btn btn-sm"><i class="fas fa-arrow-right"></i></button>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLongTitle">Weekly Newsletter</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              By clicking save changes you are subscribing to a weekly newsletter
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <button type="submit" class="btn btn-primary">Save changes</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </form>
+            </div>
+            <div class="col-md-2 col-sm-12">
+                <h4 class="text-light">Follow Us</h4>
+                <p class="text-muted">Lets be social</p>
+                <div class="coloumn">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+  

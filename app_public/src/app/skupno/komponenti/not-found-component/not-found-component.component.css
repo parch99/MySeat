@@ -1,0 +1,13 @@
+div {
+  height: 500px;
+  line-height: 500px;
+  text-align: center;
+  background-color: black;
+}
+span {
+  font-size:5vmin;
+  color:whitesmoke;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}

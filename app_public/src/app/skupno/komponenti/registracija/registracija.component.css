@@ -1,0 +1,98 @@
+body {
+	background-color: whitesmoke;
+}
+
+.form-control {
+	height: 35px;
+	border:1px solid rgb(179, 179, 179);
+}
+.form-control, .btn {        
+	border-radius: 3px;
+}
+.signup-form{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 350px;
+	min-width: 350px;
+}
+.signup-form form {
+	color: rgb(0, 0, 0);
+	font-weight:600;
+	font-size: 16px;
+	border-radius: 3px;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	background: #fff;
+	box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.15);
+	padding: 30px;
+}
+.signup-form form label{
+	margin-bottom: 5px;
+}
+.signup-form hr  {
+	margin: 0 -30px 20px;
+}    
+.signup-form .form-group {
+	margin-bottom: 15px;
+}
+.signup-form .btn {        
+	font-size: 16px;
+	font-weight: bold;
+    background: #ff002b;
+    border-radius: 1vmin;
+	border: none;
+	min-width: 140px;
+}
+.signup-form .btn:hover, .signup-form .btn:focus {
+	background:#ff004cfa !important;
+	outline: none;
+}
+.signup-form a {
+	color: #fff;
+	text-decoration: underline;
+}
+.signup-form a:hover {
+	text-decoration: none;
+}
+.signup-form form a {
+	color:#ff002b;
+	text-decoration: none;
+}	
+.signup-form form a:hover {
+	text-decoration: underline;
+}
+.signup-form .hint-text  {
+	padding-bottom: 15px;
+	text-align: center;
+}
+
+.grid--cell {
+	margin-bottom: 7px;
+	max-width: 323px;
+	min-width: 323px;
+}
+.s-btn__google {
+    border-color: #999;
+}
+.s-btn {
+    position: relative;
+	display: inline-block;
+    padding: .8em;
+	border: 1px solid;
+	border-color: rgb(212, 212, 212);
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    outline: none;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1.15384615;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+}
+.bar-md {
+    border-radius: 5px !important;
+}

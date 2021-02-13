@@ -1,0 +1,194 @@
+[
+    {
+        "tip": "Restaurant",
+        "lastnosti": {
+            "id": "relation/4065819",
+            "ulica": "Kolodvorska ulica",
+            "stavba": "da",
+            "hisna_stevilka": "1",
+            "naziv": "Restaurant 1",
+            "dobavitelj": "Pečjak",
+            "roof:material": "roof_tiles",
+            "roof:shape": "gabled",
+            "tip": "MultiPoligon"
+        },
+        "geometrija": {
+            "tip": "Poligon",
+            "koordinate": [
+                [
+                    [
+                        13.7355813,
+                        45.543016
+                    ],
+                    [
+                        13.7352592,
+                        45.5429193
+                    ],
+                    [
+                        13.7355262,
+                        45.5424832
+                    ],
+                    [
+                        13.7355688,
+                        45.542496
+                    ],
+                    [
+                        13.7358483,
+                        45.54258
+                    ],
+                    [
+                        13.7355813,
+                        45.543016
+                    ]
+                ]
+            ]
+        },
+        "id": "relation/4065819"
+    },
+    {
+        "tip": "Restaurant",
+        "lastnosti": {
+            "id": "relation/5955948",
+            "mesto": "Trebnje",
+            "hisna_stevilka": "28",
+            "postna_stevilka": "8210",
+            "ulica": "Obrtniška ulica",
+            "podjetje": "Fokulus",
+            "stavba": "da",
+            "faks": "+386 7 3482792",
+            "telefonska_stevilka": "+386 7 3482790",
+            "naziv": "Restaurant 2",
+            "odpiralni_casi": "Pon-Ned 06:00-22:00",
+            "dobavitelj": "Fokulus",
+            "trgovina": "da",
+            "tip": "MultiPoligon",
+            "invalidom_prijazno": "da"
+        },
+        "geometrija": {
+            "tip": "Poligon",
+            "koordinate": [
+                [
+                    [
+                        15.0254366,
+                        45.9103124
+                    ],
+                    [
+                        15.0254057,
+                        45.9102621
+                    ],
+                    [
+                        15.0255989,
+                        45.9102048
+                    ],
+                    [
+                        15.0256741,
+                        45.9103275
+                    ],
+                    [
+                        15.0254902,
+                        45.9103822
+                    ],
+                    [
+                        15.0255064,
+                        45.9104087
+                    ],
+                    [
+                        15.0254219,
+                        45.9104338
+                    ],
+                    [
+                        15.0253612,
+                        45.9103347
+                    ],
+                    [
+                        15.0254366,
+                        45.9103124
+                    ]
+                ]
+            ]
+        },
+        "id": "relation/5955948"
+    },
+    {
+        "tip": "Restaurant",
+        "lastnosti": {
+            "id": "relation/11765512",
+            "mesto": "Celje",
+            "hisna_stevilka": "38",
+            "postna_stevilka": "3000",
+            "ulica": "Ljubljanska cesta",
+            "podjetje": "Tonač",
+            "stavba": "roof;yes",
+            "building:levels": "1",
+            "telefonska_stevilka": "+386 3 4902230",
+            "spletni_naslov": "http://www.petrol.si/bencinski-servisi/podrobno/521",
+            "naziv": "Restaurant 3",
+            "odpiralni_casi": "Pon-Pet 06:00-20:00; Sob07:00-19:00; Ned 09:00-13:00",
+            "dobavitelj": "Tonač",
+            "tip": "MultiPoligon",
+            "invalidom_prijazno": "da"
+        },
+        "geometrija": {
+            "tip": "MultiPoligon",
+            "koordinate": [
+                [
+                    [
+                        [
+                            15.2493485,
+                            46.235071
+                        ],
+                        [
+                            15.2493065,
+                            46.2350726
+                        ],
+                        [
+                            15.2493014,
+                            46.2350121
+                        ],
+                        [
+                            15.2493454,
+                            46.2350109
+                        ],
+                        [
+                            15.2493485,
+                            46.235071
+                        ]
+                    ]
+                ],
+                [
+                    [
+                        [
+                            15.2490391,
+                            46.2350934
+                        ],
+                        [
+                            15.2490426,
+                            46.2351664
+                        ],
+                        [
+                            15.2489122,
+                            46.2351702
+                        ],
+                        [
+                            15.2489072,
+                            46.2350969
+                        ],
+                        [
+                            15.2489024,
+                            46.2350118
+                        ],
+                        [
+                            15.2490344,
+                            46.2350082
+                        ],
+                        [
+                            15.2490391,
+                            46.2350934
+                        ]
+                    ]
+                ]
+            ]
+        },
+        "id": "relation/11765512"
+    }
+]

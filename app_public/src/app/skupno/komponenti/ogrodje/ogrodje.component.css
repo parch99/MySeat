@@ -1,0 +1,11 @@
+.dropdown-toggle, .dropdown-menu {
+    cursor: pointer;
+}
+
+.dropdown-item {
+    color: rgb(62, 0, 133);
+}
+
+.ni-povezave {
+    color: #f89406;
+}

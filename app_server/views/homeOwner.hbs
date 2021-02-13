@@ -1,0 +1,114 @@
+<main class="cssOwner1">
+    <div class="cssOwner">
+        <br />
+        <br />
+        <h1>{{lokacija.naziv}}</h1>
+        <p>
+            Welcome back!
+        </p>
+        <div class="row">
+            <div class="col-md-12 col-lg-6">
+                <a href="/main"><button class="btn btn-light px-5 py-2 primary-btn">Reservations</button></a>
+            </div>
+            <div class="col-md-12 col-lg-6">
+                <a href="/venues"><button class="btn btn-light px-5 py-2 primary-btn">My Venue</button></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="Title">
+        <p>
+            Pending Reservations:
+        </p>
+    </div>
+
+<<<<<<< HEAD
+    <div class="row">
+        {{#each reservations as |reservation| }}
+        <div class="col-lg-8 col-md-12 text-lg-left text-center">
+            <div class="reservation">
+                <p>
+                    <img class="userpic" src={{reservation.userpic}}>
+                    {{reservation.user}} wants to make a reservation for a table for <b>{{reservation.table}}</b> on
+                    <b>{{reservation.date}}</b> at <b>{{reservation.time}}</b>
+=======
+    <div class = "row">
+        {{#each lokacija.rezervaciji as |reservation|}}
+        <div class = "col-lg-8 col-md-12 text-lg-left text-center">
+            <div class = "reservation">
+                <p>
+                    {{reservation.klient}} wants to make a reservation for a table for <b>{{reservation.stevilo}}</b> on <b>{{reservation.datum}}</b> at <b>{{reservation.cas}}</b>
+>>>>>>> 2bcca7b46b39cb4ccbf601bc9cce7e028872b2b7
+                </p>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-12">
+            <div class="reservation_button">
+                <p>
+                    <a href="#"><button class="accept">Accept reservation</button></a>
+                    <a href="#"><button class="decline">Decline reservation</button></a>
+                </p>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+    <div class="Title">
+        <p>
+            Latest Reviews:
+        </p>
+    </div>
+
+<<<<<<< HEAD
+    <div class="row">
+        <div class="12 col-md-12">
+            {{#each reviews as |review| }}
+            <div class="reviews">
+                <div class="row">
+                    <div class="col-lg-8 col-md-12 text-lg-left text-center">
+                        <div class="reviewer">
+                            <p>
+                                <img class="userpic" src={{review.userpic}}>
+                                <b>{{review.user}}</b> made a review of your venue:
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 text-lg-right text-center">
+                        <div class="rating">
+                            {{{stars review.ocena}}}
+=======
+    <div class = "row">
+        <div class = "12 col-md-12">
+            {{#each lokacija.komentarji as |komentar|}}
+            <div class = "reviews">
+                <div class = "row">
+                    <div class = "col-lg-8 col-md-12 text-lg-left text-center">
+                        <div class = "reviewer">
+                            <p>
+                                <b>{{komentar.avtor}}</b> made a review of your venue:
+                            </p>
+                        </div>
+                    </div>
+                    <div class = "col-lg-4 col-md-12 text-lg-right text-center">
+                        <div class = "rating">
+                            {{{stars komentar.ocena}}}
+>>>>>>> 2bcca7b46b39cb4ccbf601bc9cce7e028872b2b7
+                        </div>
+                    </div>
+                </div>
+                <div class="review">
+                    <i class="fa fa-comment-o" aria-hidden="true"></i>
+                    {{komentar.besediloKomentarja}}
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+
+    <div class="cssOwner container text-center">
+        <div class="cssOwner1">
+            <a id="buttons" href="/create_new_venue">Create New Venue</a>
+        </div>
+    </div>
+
+</main>

@@ -1,0 +1,57 @@
+<main class="homeUser1">
+    <div class="homeUser">
+        <div class="container text-center">
+            <br/><br/>
+            <h2>Welcome {{uporabnik.ime}}!</h2>
+            <p>Make a new reservation</p>
+        </div>
+        <div class = "list_button text-center">
+            <a routerLink="/seznam-lokacije"><button class = "venues_button text-center">List of all venues</button></a>
+        </div>
+    </div>
+        <div class = "Title"><p>Recent venues you've visited:</p></div>
+        <div class = "row">
+            <div class = "12 col-md-12">
+                <div class = "recents" *ngFor="let location of uporabnik.recentlyVisited">
+                    <div class = "row">
+                        <div class = "col-lg-4 col-md-12 text-lg-left text-center">
+                            <div class = "venueName">
+                                <p>
+                                    <span class="fas fa-hamburger"></span>
+                                    <b>{{location.naziv}}</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div class = "col-lg-4 col-md-6 text-lg-center text-center">
+                            <div class = "rating">
+                                <span><app-evrice [cost]="location.cost"></app-evrice></span>
+                            </div>
+                        </div>
+                        <div class = "col-lg-4 col-md-6 text-lg-right text-center">
+                            <div class = "rating">
+                                <app-zvezdice [ocena]="location.ocena"></app-zvezdice>
+                            </div>
+                        </div>
+                </div>
+                    <div class = "picker text-center">
+                        <form action="#">
+                            <label for="reservationtime1">Make a new reservation:</label>
+                            <input type="datetime-local" id="reservationtime1" name="reservationtime1">
+                            <input type="submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class = "Title"><p>Find a nearby venue:</p></div>
+    
+        <div style = "width: 100%; overflow: hidden; height: 550px;">
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=127jZwilm2Byd_NZ_Gn_IpYl1ShxJO_s3"
+                    width="100%"
+                    height="750px"
+                    frameborder="0"
+                    style="border:0; margin-top: -11vmin;">
+            </iframe>
+        </div>
+    </main>

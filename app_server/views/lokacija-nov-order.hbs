@@ -1,0 +1,47 @@
+<div class="venue">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm"></div>
+            <div class="col-sm">
+                <br><br>
+                <h1 class="text-center">Make a reservation</h1><br>
+                <form id="TTTTTTTTTTTTT" action="" method="post" role="form" class="card bg-light" style="padding: 20px;"><br>
+
+                    <div class="form-group">
+                        <label class="col-form-label" for="firstname">First name:</label>
+                        <div>
+                            <input id="firstname" name="firstname" class="form-control" placeholder="Enter first name">
+                        </div>
+                    </div><br>
+
+                    <div class="form-group">
+                        <label class="col-form-label" for="lastname">Last name:</label>
+                        <div>
+                            <input id="lastname" name="lastname" class="form-control"placeholder="Enter last name">
+                        </div>
+                    </div><br>
+
+                    <div class="form-group">
+                        <label class="col-form-label" for="phone">Phone number:</label>
+                        <div>
+                            <input class="form-control" id="phone" placeholder="069 123 456" name="phone" 
+                            pattern="[0-9]{3} [0-9]{3} [0-9]{3}" required>
+                        </div>
+                        <small>Format: 069 123 456</small>
+                    </div><br>
+                    
+                    <div class="form-group">
+                        <label class="col-form-label" for="reservationtime">Date and Time:</label>
+                        <br>
+                        <small>Check our Working Hours before ordering</small>
+                        <br>
+                        <input type="datetime-local" id="reservationtime" name="reservationtime">
+                    </div>
+
+                    <button class="btn btn-primary" style="margin-top: 20px;">Create</button>
+                </form>
+            </div>
+            <div class="col-sm"></div>
+        </div>
+    </div>
+</div><br><br>

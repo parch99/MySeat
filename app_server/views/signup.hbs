@@ -1,0 +1,45 @@
+<br><br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+
+        </div>
+        <div class="col-sm">
+            <h1 class="text-center">Sign Up</h1><br>
+            <form action="/api/uporabniki-signup" method="post" role="form" id="signupForm" class="card bg-light"
+                style="padding: 20px;">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">First name</label>
+                    <input name="ime" type="text" aria-label="First name" class="form-control" id="ime">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Last name</label>
+                    <input name="priimek" type="text" aria-label="Last name" class="form-control" id="priimek">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input name="email" type="email" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We will never share your email with
+                        anyone.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input name="geslo" type="password" class="form-control" id="exampleInputPassword1"
+                        placeholder="Password">
+                </div>
+                <div class="form-group form-check">
+                    <input name="lastnik" type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Sign Up as owner</label>
+                </div>
+                <a href="/homeUser"><button type="submit" class="btn btn-primary">Sign Up</button></a>
+            </form>
+        </div>
+        <div class="col-sm">
+
+        </div>
+    </div>
+</div>
+
+<br><br>

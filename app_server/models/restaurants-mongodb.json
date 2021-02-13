@@ -1,0 +1,77 @@
+[
+    {
+      "naziv" : "Subway",
+      "naslov" : "Slovenska cesta 1, Ljubljana",
+      "ocena" : 4,
+      "cost" : 2,
+      "number" : " 0599 59015 ",
+      "koordinate" : [
+              14.500976638111219,
+              46.046972050690115
+      ],
+      "WorkingHours" : {
+              "Monday" : "07: 00 - 00: 00",
+              "Tuesday" : "07: 00 - 00: 00",
+              "Wednesday" : "07: 00 - 00: 00",
+              "Thursday" : "07: 00 - 00: 00",
+              "Friday" : "07: 00 - 01: 00",
+              "Saturday" : "08: 00 - 01: 00",
+              "Sunday" : "09: 00 - 00: 00"
+      },
+      "komentarji": [
+          {
+              "avtor": "Marko Lajc",
+              "ocena": 5,
+              "cost" : 3,
+              "datum": "2019-11-15T00:00:00Z",
+              "besediloKomentarja": "Expensive but good"
+          },
+      {
+              "avtor": "Dejan Kofol",
+              "ocena": 4,
+              "cost" : 2,
+              "datum": "2019-11-29T00:00:00Z",
+              "besediloKomentarja": "Good food"
+          }
+      ]
+    },
+    {
+  
+      "naziv" : "Foculus",
+      "naslov" : "Gregorčičeva ulica 3",
+      "ocena" : 3,
+      "cost" : 2,
+      "number" : "(01) 421 92 95 ",
+      "koordinate" : [
+              14.502375,
+              46.047901
+      ],
+      "WorkingHours" : {
+          "Monday" : "8: 00 - 20: 00",
+          "Tuesday" : "8: 00 - 20: 00",
+          "Wednesday" : "8: 00 - 20: 00",
+          "Thursday" : "8: 00 - 20: 00",
+          "Friday" : "8: 00 - 20: 00",
+          "Saturday" : "9: 00 - 19: 00",
+          "Sunday" : "--- closed ---"
+            },
+        "komentarji" : [
+        {
+          
+          "avtor" : "Franc Horvat",
+          "ocena" : 5,
+          "cost" : 2,
+          "datum": "2019-11-17T00:00:00Z",
+          "besediloKomentarja" : "Great resturant, the food was good, had a great time"
+        },
+        {
+          
+          "avtor" : "Ana Horvat",
+          "ocena" : 5,
+          "cost" : 2,
+          "datum": "2019-10-07T00:00:00Z",
+          "besediloKomentarja" : "Great resturant"
+        }
+     ]
+    }
+]

@@ -1,0 +1,51 @@
+<div class="container">
+  <form id="dodajKomentar" action="" method="post" role="form">
+    <br>
+    {{#ujemanjeNiza napaka "vrednost"}}
+        <div class="alert alert-danger">Prosim izpolnite polja!</div>
+    {{/ujemanjeNiza}}
+    <br>
+
+    <div class="form-group">
+      <label class="col-form-label" for="naziv">Your Name</label>
+      <div>
+        <input id="naziv" class="form-control" name="naziv">
+      </div>
+      <br>
+    </div>
+
+    <div class="form-group">
+        <label class="col-form-label" for="komentar">Add new comment</label>
+        <div>
+          <textarea id="komentar" class="form-control" name="komentar" rows="3"></textarea>
+        </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-form-label" for="ocena">Your rate:</label>
+      <div>
+        <select id="ocena" name="ocena" class="form-control">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-form-label" for="cost">Price (1 Cheap - 3 Expensive):</label>
+      <div>
+        <select id="cost" name="cost" class="form-control">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+      </select>
+      </div>
+    </div>
+
+    <br>
+    <button class="btn btn-primary">Submit</button><br><br><br><br>
+  </form>
+</div>

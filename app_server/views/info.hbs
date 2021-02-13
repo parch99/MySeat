@@ -1,0 +1,78 @@
+<body>
+    <main>
+        <div class="container demo-bb text-center">
+            <h1>{{lokacija.naziv}}</h1>
+        </div>
+        <div class="container demo-bg">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h4 class="money text-center">
+                        <span class="text-warning">{{{money lokacija.cost}}}</span>
+                    </h4>
+                    <div class="email text-center">
+                        <a href="#"><button class="btn btn-light px-5 py-2 primary-btn">Call {{lokacija.number}}</button></a>
+                    </div>
+                    <div class="email text-center">
+                        <a href="/lokacija/{{lokacija._id}}/order/nov"><button class="btn btn-light px-5 py-2 primary-btn">Make a reservation</button></a>
+                    </div>
+                    <h4 class="stars text-center">
+                        <span class="text-warning">{{{stars lokacija.ocena}}}</span>
+                    </h4>
+                     <div class="email text-center" style="color: whitesmoke; font-weight: bold">
+                        <h5>Address: {{lokacija.naslov}}</h5>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="mapa embed-responsive embed-responsive-4by3">
+                        <iframe
+                            src="https://maps.google.com/maps?q={{lokacija.koordinate.lat}},{{lokacija.koordinate.lng}}&z=15&output=embed"></iframe>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="business-hours">
+                        <h2 class="title">Working Hours</h2>
+                        <ul class="list-unstyled opening-hours">
+                            {{#each lokacija.WorkingHours as |value key|}}
+                            <li>{{key}} <span class="pull-right">{{value}}</span></li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="uReviews">
+            <div class="text-center">
+                <a href="/lokacija/{{lokacija._id}}/komentar/nov" class="btn btn-outline-danger px-5 py-2" role="button">Add comment</a>
+            </div>
+            <p>User reviews:</p>
+        </div>
+        {{#each lokacija.komentarji as |komentar|}}
+        <div class="reviews">
+            <div class="row">
+                <div class="col-lg-8 col-md-12 text-lg-left text-center">
+                    <div class="reviewer">
+                        <p>
+                            <img class="userpic"
+                                src="https://i.pinimg.com/originals/0c/3b/3a/0c3b3adb1a7530892e55ef36d3be6cb8.png">
+                            <b>{{komentar.avtor}}</b>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 text-lg-right text-center">
+                    <div>
+                        <p>{{formatirajDatum komentar.datum}}</p>
+                    </div>
+                    <div class="rating">
+                        {{{stars komentar.ocena}}}
+                    </div>
+                </div>
+            </div>
+            <div class="review">
+                {{komentar.besediloKomentarja}}
+            </div>
+        </div>
+        {{/each}}:
+        </div>
+    </main>
+</body>

@@ -1,0 +1,20 @@
+[
+    {
+        "avtor": "Franc Horvat",
+        "ocena": "5",
+        "datum": "15. november, 2020",
+        "besediloKomentarja": "Great resturant, the food was good, had a great time"
+    },
+    {
+        "avtor": "Laura M",
+        "ocena": "4",
+        "datum": "14. november, 2020",
+        "besediloKomentarja": "Great resturant, the food was good, had a great time"
+    },
+    {
+        "avtor": "Jaka Sodnik",
+        "ocena": "4",
+        "datum": "11. november, 2020",
+        "besediloKomentarja": "Great resturant, the food was good, had a great time"
+    }
+]

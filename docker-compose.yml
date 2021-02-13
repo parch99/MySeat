@@ -1,0 +1,32 @@
+version: '3.5'
+
+services:
+  node-api:
+    container_name: sp-edugeocache-app
+    restart: always
+    ports:
+      - "3000:3000"
+    image: sp-edugeocache-node-js
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    environment:
+      - NODE_ENV=docker
+    command: "npm start"
+    networks:
+      - sp-network
+  mongo-db:
+    image: mongo
+    container_name: sp-edugeocache-mongodb
+    ports:
+      - "27017-27019:27017-27019"
+    networks:
+      - sp-network
+      
+networks:
+  sp-network:
+    name: sp-network
+    driver: bridge

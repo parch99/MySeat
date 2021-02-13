@@ -1,0 +1,750 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Lobster&family=Patua+One&family=Rubik:wght@300&family=Sniglet&display=swap');
+
+* {
+   box-sizing: border-box;
+}
+
+section {
+   overflow-x: hidden;
+}
+
+:root {
+   --Sniglet-font: "Sniglet", cursive;
+   --Rubik: "Rubik", cursive;
+   --Patua: "Patua One", cursive;
+   --Lobster: "Lobster", cursive;
+   --light-black: #2e2c2caf;
+   --bggradient: linear-gradient(to bottom, #ff002b, #ff0037);
+   --reversebggradient: linear-gradient(to bottom, #f10028, #ff002b);
+}
+
+header a {
+   font-family: var(--Sniglet-font);
+   font-size: 0.9em;
+   color: whitesmoke;
+}
+
+header {
+   background: var(--reversebggradient);
+}
+
+header .nav-item {
+   padding: 0.9em;
+}
+
+header .navbar-brand {
+   padding-left: 8rem;
+}
+
+header .nav-link:hover {
+   color: rgb(62, 0, 133);
+}
+
+/* ------------------------------ BUTTONS ------------------------------ */
+* {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+.buttons {
+   margin: 0.5vmin;
+   text-align: center;
+}
+.btn-hover {
+   width: 200px;
+   font-size: 15px;
+   font-weight: 600;
+   color: #fff;
+   cursor: pointer;
+   margin: 20px;
+   height: 55px;
+   text-align:center;
+   border: none;
+   background-size: 300% 100%;
+
+   moz-transition: all .4s ease-in-out;
+   -o-transition: all .4s ease-in-out;
+   -webkit-transition: all .4s ease-in-out;
+   transition: all .4s ease-in-out;
+}
+.btn-hover:hover {
+   background-position: 100% 0;
+   moz-transition: all .4s ease-in-out;
+   -o-transition: all .4s ease-in-out;
+   -webkit-transition: all .4s ease-in-out;
+   transition: all .4s ease-in-out;
+}
+.btn-hover:focus {
+   outline: none;
+}
+.btn-hover.color-6 {
+   background-image: linear-gradient(to right,  #ff002b,  #ff0037, #ff006afa, #ff0037);
+   box-shadow: 0 4px 15px 0 rgb(255, 0, 76);
+}
+/* ------------------------------ BUTTONS ------------------------------ */
+
+.h {
+   background: var(--bggradient);
+}
+
+.h .row .col-md-5 {
+   padding: 4.2vmin 1vmin;
+}
+
+.h .row .col-md-7 {
+   padding: 22vmin 1vmin;
+   padding-bottom: 10vmin;
+   font-family: var(--Rubik);
+}
+
+.h .row .col-md-5 img {
+   width: 90%;
+   height: 90%;
+}
+
+.h .container .col-md-7 h6 {
+   padding: 1vmin;
+   letter-spacing: 0.5em;
+   color:whitesmoke;
+}
+
+.h  .container .col-md-7 h1 {
+   font-size: 8vmin;
+   font-weight: bold;
+   color: whitesmoke;
+}
+
+.h  .container .col-md-7 button {
+   margin-top: 7vmin;
+   border-radius: 30px;
+   font-weight: bold;
+   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.473);
+}
+
+/* section 1 */
+.section-1 {
+   margin: 15vmin;
+}
+
+.section-1 .row .col-md-6 .city img {
+   width: 100%;
+   border-radius: 0.2em;
+}
+
+.section-1 .row .col-md-5 .panel {
+   position: absolute;
+   background: white;
+   top: 13vmin;
+   left: -15vmin;
+   border-radius: 3px;
+   text-align: left;
+   padding: 8vmin 6vmin 13vmin 10vmin;
+   box-shadow: 0px 25px 42px rgba(0, 0, 0, 0.2);
+   font-family: var(--Rubik);
+   z-index: 1;
+}
+
+.section-1 .row .col-md-5 h1 {
+   font-weight: bold;
+   padding: 0.4em 0;
+   font-size: 2em;
+}
+
+.section-1 .row .col-md-5>p {
+   font-size: 1em;
+   color: rgba(0, 0, 0, 0.7);
+}
+
+/* section 1 */
+
+/* section 3 */
+.section-3 {
+   height: 70vmin;
+   margin-top: 15vmin;
+   background: var(--reversebggradient);
+}
+
+.section-3 .row .col-md-12 h1 {
+   padding: 2em 0 0.5em 0;
+   color: whitesmoke;
+   font-size: 6vmin;
+}
+
+.section-3 .col-md-12>p {
+   padding: 0.4em 2em;
+   padding-bottom: 2em;
+   color: whitesmoke;
+   font-size: 3vmin;
+}
+
+.section-3 .desktop {
+   background: white;
+   display: inline-block;
+   border-radius: 3em;
+   padding: 2vmin 4.5vmin;
+   margin: 1em;
+}
+
+.section-3 .desktop h3 {
+   font-size: 4vmin;
+}
+
+.section-3 .desktop p {
+   font-size: 2vmin;
+}
+
+/* section 3 */
+
+/* FOOTER */
+footer {
+   background: rgba(0, 0, 0, 0.75);
+   overflow-x: hidden;
+   padding: 14vmin 18vmin;
+}
+footer p>span {
+   color: #ff004c;
+}
+footer input {
+   border: none !important;
+}
+footer input:placeholder {
+   color: white;
+}
+footer .input-group .input-group-text {
+   background: var(--bggradient);
+   border: none;
+}
+footer .coloumn i {
+   color:#ff004c;
+}
+footer .coloumn i+i {
+   padding: 0 0.15em;
+}
+/* FOOTER */
+
+/* ABOUT PAGE */
+.about .section-4 {
+   height: 35vmin;
+   background: #dd2476;
+   background: var(--bggradient);
+}
+.about .section-4 .row .col-md-12>h2 {
+   color: whitesmoke;
+   padding-top: 7.5vmin;
+   font-size: 12vmin;
+   font-family: var(--Lobster);
+}
+.about .section-4 .row .col-md-12>p {
+   color: whitesmoke;
+   font-size: 2vmin;
+   font-weight: bold;
+   padding: 3vmin 21vmin;
+}
+.about .section-5 .row .col-md-12>p {
+   font-size: 3vmin;
+   padding: 13vmin 25vmin;
+}
+/* ABOUT PAGE */
+
+/* HOMEUSER PAGE */
+header .homeUser,
+.homeUser1 {
+   overflow-x: hidden
+}
+main .homeUser .list_button {
+   padding-top: 30px;
+   padding-bottom: 50px;
+}
+main .homeUser {
+   background: var(--bggradient);
+}
+main .homeUser p{
+   color: whitesmoke;
+   margin-top: 2vmin;
+}
+main .homeUser h2{
+   font-size: 10vmin;
+   font-family: var(--Lobster);
+   color: whitesmoke;
+}
+main .homeUser .list_button .venues_button {
+   border-radius: 30px;
+   font-weight: bold;
+   color: black;
+   border: none;
+   background-color: rgb(245, 245, 245);
+   font-size: 16px;
+   cursor: pointer;
+   display: inline-block;
+   padding: 10px 50px 10px 50px;
+}
+.homeUser1 .Title {
+   font-family: var(--Lobster);
+   font-size: 2em;
+   color: #ff004cfa;
+   text-align: center;
+   padding: 10px;
+   margin: 20px;
+}
+.homeUser1 .recents {
+   font-family: var(--Sniglet-font);
+   font-size: 1.5em;
+   color:#ff004cfa;
+   text-align: center;
+   background-color: whitesmoke;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   padding: 10px;
+   margin: 20px;
+   border-radius: 25px;
+}
+.homeUser1 .recents .venueName {
+   padding: 5px;
+}
+.homeUser1 .recents .rating {
+   padding: 5px;
+}
+.homeUser1 .recents .review .fa-comment-o {
+   color: #2e2c2caf;
+}
+.homeUser1 .empty {
+   color: lightgray;
+}
+.homeUser1 input[type="submit"] {
+   border-radius: 30px;
+   font-weight: bold;
+   color: #dd2476;
+   border-color: #dd2476;
+   background-color: whitesmoke;
+   font-size: 16px;
+   cursor: pointer;
+   display: inline-block;
+   padding: 10px;
+}
+.homeUser1 input[type="datetime-local"] {
+   border-radius: 30px;
+   color: #dd2476;
+   border-color: #dd2476;
+   background-color: whitesmoke;
+   cursor: pointer;
+   display: inline-block;
+   margin-bottom: 10px;
+}
+/* HOMEUSER PAGE */
+
+/* HOMEOWNER PAGE */
+header .cssOwner,
+.cssOwner1 {
+   overflow-x: hidden
+}
+header .cssOwner .row .col-md-12 {
+   padding: 2vmin 1vmin;
+   padding-bottom: 3vmin;
+   font-family: var(--Rubik);
+}
+header .cssOwner .container .col-md-12 button {
+   border-radius: 30px;
+   font-weight: bold;
+}
+.cssOwner1 .cssOwner {
+   background: linear-gradient(to bottom, #dd2476, #ff512f);
+   padding: 10px;
+   text-align: center;
+}
+.cssOwner1 .cssOwner .btn {
+   padding: 10px;
+   margin: 10px;
+}
+.cssOwner1 .reservation {
+   font-family: var(--Sniglet-font);
+   font-size: 1.5em;
+   color: whitesmoke;
+   background: linear-gradient(to bottom, #dd2476, #ff512f);
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   padding: 10px 10px 10px 30px;
+   margin: 20px;
+   border-radius: 25px;
+}
+.cssOwner1 .reservation .userpic {
+   height: 25px;
+   width: 25px;
+   margin-bottom: 5px;
+}
+.cssOwner1 .reservation_button {
+   font-family: var(--Sniglet-font);
+   font-size: 1.5em;
+   color: whitesmoke;
+   text-align: center;
+   background: linear-gradient(to bottom, #dd2476, #ff512f);
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   padding: 10px;
+   margin: 20px;
+   border-radius: 25px;
+}
+.cssOwner1 .reservation_button .accept {
+   border-radius: 30px;
+   font-weight: bold;
+   color: black;
+   border: none;
+   background-color: whitesmoke;
+   font-size: 16px;
+   cursor: pointer;
+   display: inline-block;
+   padding: 5px;
+   margin-left: 20px;
+   margin-right: 20px;
+}
+.cssOwner1 .reservation_button .decline {
+   border-radius: 30px;
+   font-weight: bold;
+   color: black;
+   border: none;
+   background-color: whitesmoke;
+   font-size: 16px;
+   cursor: pointer;
+   display: inline-block;
+   padding: 5px;
+   margin-left: 20px;
+   margin-right: 20px;
+}
+.cssOwner1 .Title {
+   font-family: var(--Sniglet-font);
+   font-size: 2em;
+   color: #dd2476;
+   text-align: center;
+   padding: 10px;
+   margin: 20px;
+}
+.cssOwner1 .reviews {
+   font-family: var(--Sniglet-font);
+   font-size: 1.5em;
+   color: #dd2476;
+   text-align: center;
+   background-color: whitesmoke;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   padding: 10px;
+   margin: 20px;
+   border-radius: 25px;
+}
+.cssOwner1 .reviews .userpic {
+   height: 25px;
+   width: 25px;
+   margin-bottom: 5px;
+}
+.cssOwner1 .reviews .reviewer {
+   padding-left: 20px;
+}
+.cssOwner1 .reviews .rating {
+   padding-right: 20px;
+}
+.cssOwner1 .reviews .review {
+   text-align: justify;
+   padding: 20px;
+}
+.cssOwner1 .reviews .review .fa-comment-o {
+   color: #2e2c2caf;
+}
+.cssOwner1 .empty {
+   color: lightgray;
+}
+/* HOMEOWNER PAGE */
+
+/* REST LIST PAGE */
+.page1 .section-1 {
+   background-color: white;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: 100% 100%;
+   padding: 12vmin 0;
+   height: 700px;
+}
+.page1 a, a:link, a:visited {
+   color: white;
+   text-decoration: none;
+}
+.page1 .section-1>h2 {
+   color: #dd2476;
+   font-family: var(--Rubik);
+   font-size: 10vmin;
+   font-weight: bold;
+   margin-bottom: 80px;
+}
+/* REST LIST PAGE */
+
+/* RESTAURANT PAGE */
+.eachrestname {
+   height: 35vmin;
+   background: #dd2476;
+   background: var(--bggradient);
+}
+
+.eachrestname .row .col-md-12>h1 {
+   color: whitesmoke;
+   padding-top: 7.5vmin;
+   font-size: 11vmin;
+   font-family: var(--Lobster);
+}
+.eachrestname .row .col-md-12>p {
+   color: whitesmoke;
+   font-size: 2vmin;
+   font-weight: bold;
+   padding: 7vmin 21vmin;
+}
+.money{
+   margin-top: 5.5vmin;
+   margin-bottom: 5vmin;
+}
+.stars{
+   margin-top: 3.5vmin;
+  margin-bottom: 4vmin;
+}
+.mapa{
+  margin-top: 6vmin;
+}
+.demo-bg{
+  background: #ff0037;
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+.pull-right{
+  float: right;
+}
+.business-hours {
+background: #222; 
+padding: 40px 14px;
+margin-top: -15px;
+position: relative;
+}
+.business-hours:before{
+  content: '';
+  width: 23px;
+  height: 23px;
+  background: #111;
+  position: absolute;
+  top: 5px;
+  left: -12px;
+  transform: rotate(-45deg);
+  z-index: -1;
+}
+.business-hours .title {
+   font-size: 20px;
+   color: whitesmoke;
+   text-transform: uppercase;
+   padding-left: 5px;
+   margin-bottom: 4vmin;
+   border-left: 4px solid #ff004cfa;
+ }
+ .business-hours li {
+   color: whitesmoke;
+   line-height: 2.5vmin;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.692); 
+ }
+ .business-hours li:last-child {
+    border-bottom: none; 
+ }
+.business-hours .pull-right{
+  margin-left: 15vmin;
+  text-align: left;
+}
+.demo-bg .row .col-sm-4 .logo img{
+  margin-top: -25vmin;
+}
+.container .row .col-sm-4 .email button{
+  border-radius: 30px;
+  font-weight: bold;
+  margin-bottom: 1vmin;
+  cursor: default;
+}
+.setReview {
+  font-family: var(--Sniglet-font);
+  font-size: 1.5em;
+  color: #ff004cfa
+  text-align: left;
+  background-color: rgb(150, 59, 59);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 25px;
+}
+.uReviews a{
+  color: #ff004cfa
+  border-radius: 30px;
+  font-weight: bold;
+  margin-bottom: 12vmin;
+  text-align: center;
+}
+.uReviews p{
+   font-family: var(--Sniglet-font);
+   font-size: 2em;
+   color:#ff004cfa;
+   text-align: center;
+   padding: 10px;
+   margin: 20px;
+ }
+.reviews {
+  font-family: var(--Sniglet-font);
+  font-size: 1.5em;
+  color:#ff004cfa;
+  background-color: white;
+  box-shadow: 0 7px 48px 0 rgba(0, 0, 0, 0.15);
+  padding: 20px 15px 15px 15px;
+  margin: 20px;
+  border-radius: 25px;
+}
+.reviews .userpic {
+  height: 25px;
+  width: 25px;
+  margin-bottom: 5px;
+}
+.reviews .reviewer {
+  padding-left: 20px;
+}
+.reviews .rating {
+  padding-right: 20px;
+}
+.reviews .moneyRating {
+  padding-right: 20px;
+}
+.reviews .review{
+  padding: 1vmin 3vmin 2vmin;
+}
+.empty{
+  color: lightgray;
+}
+
+
+/* RESTAURANT PAGE */
+
+/*RESTAURANT LIST */
+
+.RestaurantList .section-1 {
+   background-color: white;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: 100% 100%;
+   padding: 5px;
+   position: relative;
+}
+
+.RestaurantList .wrapper {
+   text-align: center;
+}
+
+.RestaurantList h1 {
+   position: relative;
+   color: #dd2476;
+   font-family: var(--Rubik);
+   font-size: 6vw;
+   font-weight: bold;
+   margin-bottom: 14vmin;
+   margin-top: 8vmin;
+}
+
+.RestaurantList .restaurants {
+   position: relative;
+}
+
+.RestaurantList .restaurant {
+   position: center;
+   height: 100px;
+   background: var(--bggradient);
+   padding: 10px;
+   margin-bottom: 40px;
+}
+
+.RestaurantList .slika {
+   height: 80px;
+   
+   margin-right: 1.5vmin;
+}
+
+.restname {
+   height: 35vmin;
+   background: #dd2476;
+   background: var(--bggradient);
+}
+.restname .row .col-md-12>h1 {
+   color: whitesmoke;
+   padding-top: 7.5vmin;
+   font-size: 11vmin;
+   font-family: var(--Lobster);
+}
+.restname .row .col-md-12>p {
+   color: whitesmoke;
+   font-size: 2vmin;
+   font-weight: bold;
+   padding: 7vmin 21vmin;
+}
+
+.RestaurantList .text {
+   font-size: 23px;
+   color: whitesmoke;
+   padding: 0px;
+   text-overflow: ellipsis;
+}
+
+.RestaurantList .text:hover {
+   color: black;
+}
+
+.RestaurantList .sub-text {
+   font-size: 14px;
+   color: whitesmoke;
+   margin: 0px;
+   padding: 0px;
+   text-overflow: ellipsis;
+}
+
+.RestaurantList .stars {
+   color: whitesmoke;
+}
+
+.RestaurantList .restaurant-link:hover {
+   color: black;
+   text-decoration: none;
+}
+
+.RestaurantList .comment {
+   padding: 3px;
+   background-color: white;
+   border-radius: 0.5vmin;
+}
+.RestaurantList .comment{
+   font-family: var(--Rubik);
+   font-weight: bold;
+   color: rgba(0, 0, 0, 0.89);
+   font-size: 2.5vmin;
+}
+/*RESTAURANT LIST */
+
+/*CREATE NEW VENUE*/
+.venue .image-preview {
+   width: 300px;
+   min-height: 100px;
+   border: 2px solid #dddddd;
+   margin-top: 15px;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-weight: bold;
+   color: #cccccc;
+}
+
+.venue .image-preview__image {
+   display: none;
+   width: 100%;
+}
+
+.venue .text-center {
+   margin-top: 30px;
+   font-family: var(--Rubik);
+   font-weight: bolder;
+}
+
+.venue .form-group {
+   font-family: var(--Rubik);
+   font-weight: bold;
+}
+/*CREATE NEW VENUE*/

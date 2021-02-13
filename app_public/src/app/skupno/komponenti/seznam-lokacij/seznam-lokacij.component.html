@@ -1,0 +1,126 @@
+<body>
+  <div class="restname container-fluid text-center">
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <h1>Restaurants</h1>
+            <p>At nam docendi indoctum efficiantur. Minim inciderint in il id, veniam</p>
+        </div>
+    </div>
+  </div><br><br>
+  <div class="buttons text-center" [ngSwitch]="jePrijavljen()">
+    <button (click)="obrazecZaRestPrikazan=true" *ngSwitchCase="true" class="btn-hover color-6" >Add a Restaurant</button>
+    <button routerLink="/prijava" *ngSwitchDefault class="btn-hover color-6">Sign in to Add a Restaurant</button>
+  </div>
+  
+  <div class="venue">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm"></div>
+                <div *ngIf="obrazecZaRestPrikazan" class="col-sm"><br><br>
+                    <h1 class="text-center">Create your Restaurant</h1><br>
+                    <form (ngSubmit)="dodajNovRestoran()" class="card bg-light" style="padding: 20px;"><br>
+
+                        <div *ngIf="obrazecNapaka" class="alert alert-danger" role="alert">
+                          {{ obrazecNapaka }}
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-form-label" for="naziv">Restaurant name:</label>
+                            <div>
+                                <input [(ngModel)]="novRestoran.naziv" id="naziv" name="naziv" class="form-control"
+                                style="box-shadow: 0 4px 7px 0 rgb(255, 0, 76);" placeholder="Restaurant name">
+                            </div>
+                        </div><br>
+
+                        <div class="form-group">
+                            <label class="col-form-label" for="naslov">Restaurant address:</label>
+                            <div>
+                                <input [(ngModel)]="novRestoran.naslov" id="naslov" name="naslov" class="form-control"
+                                style="box-shadow: 0 4px 7px 0 rgb(255, 0, 76);" placeholder="Resturant address">
+                            </div>
+                        </div><br>
+
+                        <div class="form-group">
+                            <label class="col-form-label" for="koordinatelng">Coordinates Longitude:</label>
+                            <div>
+                                <input [(ngModel)]="novRestoran.koordinatelng" id="koordinatelng" name="koordinatelng" 
+                                style="box-shadow: 0 4px 7px 0 rgb(255, 0, 76);"class="form-control" placeholder="Example 15.123032">
+                            </div>
+                        </div><br>
+
+                        <div class="form-group">
+                            <label class="col-form-label" for="koordinatelat">Coordinates Latitude:</label>
+                            <div>
+                                <input [(ngModel)]="novRestoran.koordinatelat" id="koordinatelat" name="koordinatelat" 
+                                style="box-shadow: 0 4px 7px 0 rgb(255, 0, 76);"class="form-control" placeholder="Example 46.123032">
+                            </div>
+                        </div><br>
+
+                        <div class="form-group">
+                            <label class="col-form-label" for="mondayfriday">Working Hours Monday - Friday:</label>
+                            <div>
+                                <input [(ngModel)]="novRestoran.mondayfriday" id="mondayfriday" name="mondayfriday" 
+                                style="box-shadow: 0 4px 7px 0 rgb(255, 0, 76);"class="form-control"placeholder="11:00 - 23:00">
+                            </div>
+                        </div><br>
+
+                        <div class="form-group">
+                            <label class="col-form-label" for="saturday">Working Hours Saturday:</label>
+                            <div>
+                                <input [(ngModel)]="novRestoran.saturday" id="saturday" name="saturday" 
+                                style="box-shadow: 0 4px 7px 0 rgb(255, 0, 76);"class="form-control" placeholder="12:00 - 23:00">
+                            </div>
+                        </div><br>
+
+                        <div class="form-group">
+                            <label class="col-form-label" for="sunday">Working Hours Sunday:</label>
+                            <div>
+                                <input [(ngModel)]="novRestoran.sunday" id="sunday" name="sunday" 
+                                style="box-shadow: 0 4px 7px 0 rgb(255, 0, 76);"class="form-control"placeholder="12:00 - 23:00 or closed">
+                            </div>
+                        </div><br>
+
+                        <div class="form-group">
+                            <label class="col-form-label" for="phone">Phone number:</label>
+                            <div>
+                                <input [(ngModel)]="novRestoran.phone" class="form-control" id="phone" placeholder="069 123 456" 
+                                style="box-shadow: 0 4px 7px 0 rgb(255, 0, 76);"name="phone" pattern="[0-9]{3} [0-9]{3} [0-9]{3}" required>
+                            </div>
+                            <small>Format: 069 123 456</small>
+                        </div><br>
+                        <button class="btn btn-outline-danger px-5 py-2">Create</button><br>
+                        <button (click)="obrazecZaRestPrikazan=false" class="btn btn-outline-danger px-5 py-2">Cancel</button><br>
+                    </form>
+                </div>
+                <div class="col-sm"></div>
+            </div>
+        </div>
+    </div><br><br>
+
+  <main class="RestaurantList">
+    <section class="section-1">
+          <div class="alert alert-warning" [hidden]="!sporocilo">{{sporocilo}}</div>
+            <div class="restaurants">
+                <div class="container" *ngFor="let lokacija of lokacije">
+                    <a routerLink="/lokacija/{{lokacija._id}}">
+                        <div class="restaurant">
+                            <p style="float: right;" class="comment">
+                                {{lokacija.razdalja | razdalja}}
+                            </p>
+                            <a class="restaurant-link">
+                                <p style="float: left;" class="slika">
+                                    <img class="slika" src="https://uploads.turbologo.com/uploads/design/hq_preview_image/959900/draw_svg20200926-13815-123nwtm.svg.png">
+                                </p>
+                                <span class="text">{{lokacija.naziv}}</span>
+                            </a>
+                            <p class="sub-text">{{lokacija.naslov}}</p>
+                            <small class="stars">
+                                <app-zvezdice [ocena]="lokacija.ocena"></app-zvezdice>
+                            </small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+      </section>
+  </main>
+</body>

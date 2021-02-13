@@ -1,0 +1,77 @@
+<div class="venue">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm"></div>
+            <div class="col-sm">
+                <br><br>
+                {{#ujemanjeNiza napaka "vrednost"}}
+                    <div class="alert alert-danger">Please fill in all the fields</div>
+                {{/ujemanjeNiza}}
+                <h1 class="text-center">Create your Restaurant</h1><br>
+                <form id="dodajRestoran" action="" method="post" role="form" class="card bg-light" style="padding: 20px;"><br>
+
+                    <div class="form-group">
+                        <label class="col-form-label" for="naziv">Restaurant name:</label>
+                        <div>
+                            <input id="naziv" name="naziv" class="form-control" placeholder="Enter venue name">
+                        </div>
+                    </div><br>
+
+                    <div class="form-group">
+                        <label class="col-form-label" for="naslov">Restaurant address:</label>
+                        <div>
+                            <input id="naslov" name="naslov" class="form-control"placeholder="Enter venue address">
+                        </div>
+                    </div><br>
+
+                    <div class="form-group">
+                        <label class="col-form-label" for="koordinatelng">Coordinates Longitude:</label>
+                        <div>
+                            <input id="koordinatelng" name="koordinatelng" class="form-control" placeholder="Example 15.123032">
+                        </div>
+                    </div><br>
+
+                    <div class="form-group">
+                        <label class="col-form-label" for="koordinatelat">Coordinates Latitude:</label>
+                        <div>
+                            <input id="koordinatelat" name="koordinatelat" class="form-control" placeholder="Example 46.123032">
+                        </div>
+                    </div><br>
+
+                    <div class="form-group">
+                        <label class="col-form-label" for="mondayfriday">Working Hours Monday - Friday:</label>
+                        <div>
+                            <input id="mondayfriday" name="mondayfriday" class="form-control"placeholder="11:00 - 23:00">
+                        </div>
+                    </div><br>
+
+                    <div class="form-group">
+                        <label class="col-form-label" for="saturday">Working Hours Saturday:</label>
+                        <div>
+                            <input id="saturday" name="saturday" class="form-control" placeholder="12:00 - 23:00">
+                        </div>
+                    </div><br>
+
+                    <div class="form-group">
+                        <label class="col-form-label" for="sunday">Working Hours Sunday:</label>
+                        <div>
+                            <input id="sunday" name="sunday" class="form-control"placeholder="12:00 - 23:00 or closed">
+                        </div>
+                    </div><br>
+
+                    <div class="form-group">
+                        <label class="col-form-label" for="phone">Phone number:</label>
+                        <div>
+                            <input class="form-control" id="phone" placeholder="069 123 456" name="phone" 
+                            pattern="[0-9]{3} [0-9]{3} [0-9]{3}" required>
+                        </div>
+                        <small>Format: 069 123 456</small>
+                    </div><br>
+                    
+                    <button class="btn btn-primary" style="margin-top: 20px;">Create</button>
+                </form>
+            </div>
+            <div class="col-sm"></div>
+        </div>
+    </div>
+</div><br><br>

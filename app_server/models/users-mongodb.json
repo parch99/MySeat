@@ -1,0 +1,40 @@
+[
+    {
+        "ime": "Bill",
+        "priimek": "Gates",
+        "spol": "male",
+        "email": "billreptil@gmail.com",
+        "geslo": "Bill1234!",
+        "recentlyVisited": [
+            {
+                "naziv": "Foculus",
+                "ocena": 4,
+                "cost": 1
+            },
+            {
+                "naziv": "AjdaBurger",
+                "ocena": 4,
+                "cost": 1
+            }
+        ]
+    },
+    {
+        "ime": "Mark",
+        "priimek": "Breznik",
+        "spol": "male",
+        "email": "breznikmark@gmail.com",
+        "geslo": "Mark1234!",
+        "recentlyVisited": [
+            {
+                "naziv": "Foculus",
+                "ocena": 4,
+                "cost": 1
+            },
+            {
+                "naziv": "AjdaBurger",
+                "ocena": 4,
+                "cost": 1
+            }
+        ]
+    }
+]
