@@ -91,6 +91,8 @@ export class SeznamLokacijComponent implements OnInit {
     this.novRestoran.saturday = "";
     this.novRestoran.sunday = "";
   }
+  searchText;
+  
   public jePrijavljen(): boolean {
     return this.avtentikacijaStoritev.jePrijavljen();
   }

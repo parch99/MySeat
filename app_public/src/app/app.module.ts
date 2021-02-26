@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { AppUsmerjanjeModule } from './moduli/app-usmerjanje/app-usmerjanje.module';
 
 import { SeznamLokacijComponent } from './skupno/komponenti/seznam-lokacij/seznam-lokacij.component';
@@ -27,6 +27,7 @@ import { IzbrisiIdPipe } from './skupno/cevi/izbrisi-id.pipe';
 import { NotFoundComponentComponent } from './skupno/komponenti/not-found-component/not-found-component.component';
 import { AccountRecoveryComponent } from './skupno/komponenti/account-recovery/account-recovery.component';
 import { PasswordResetComponent } from './skupno/komponenti/password-reset/password-reset.component';
+
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { PasswordResetComponent } from './skupno/komponenti/password-reset/passw
     HttpClientModule,
     FormsModule, 
     ReactiveFormsModule,
+    Ng2SearchPipeModule,
     AppUsmerjanjeModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],

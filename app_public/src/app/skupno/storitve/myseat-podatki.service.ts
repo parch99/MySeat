@@ -3,7 +3,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Lokacija, Komentar } from '../razredi/lokacija';
 import { Uporabnik } from '../razredi/uporabnik';
-import { UserPassReset } from '../razredi/userpassreset';
 import { RezultatAvtentikacije } from '../razredi/rezultat-avtentikacije';
 import { environment } from '../../../environments/environment';
 import { SHRAMBA_BRSKALNIKA } from '../razredi/shramba';
@@ -41,10 +40,18 @@ export class MyseatPodatkiService {
       .then(odgovor => odgovor as any)
       .catch(this.obdelajNapako);
   }
-  public resetPassword(user: UserPassReset): Promise<any> {
+  public resetPassword(uporabnik: Uporabnik): Promise<any> {
     const url: string = `${this.apiUrl}/reset-password`;
     return this.http
-      .post(url, user)
+      .post(url, uporabnik)
+      .toPromise()
+      .then(odgovor => odgovor as any)
+      .catch(this.obdelajNapako);
+  }
+  public resetPasswordGetuserid(token: string): Promise<any> {
+    const url: string = `${this.apiUrl}/reset-password/${token}`;
+    return this.http
+      .get(url)
       .toPromise()
       .then(odgovor => odgovor as any)
       .catch(this.obdelajNapako);

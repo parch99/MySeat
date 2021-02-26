@@ -657,5 +657,6 @@ router.get('/google/callback', passport.authenticate('google', { failureRedirect
       }
 });
 router.post('/send-recovery-email', ctrlAvtentikacija.sendRecoveryEmail);
+router.get('/reset-password/:token', ctrlAvtentikacija.resetPasswordGetuserid);
 router.post('/reset-password', ctrlAvtentikacija.resetPassword);
 module.exports = router;

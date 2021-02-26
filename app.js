@@ -119,7 +119,7 @@ app.use('/api', (req, res, next) => {
 
 //app.use('/', indexRouter);
 app.use('/api', indexApi);
-app.get(/(\/prijava)|(\/registracija)|(\/informacije)|(\/lokacija\/[a-z0-9]{24})|(\/)|(\/uporabnik\/[a-z0-9]{24})/, (req, res, next) => {
+app.get(/(\/prijava)|(\/registracija)|(\/informacije)|(\/reset-password\/[a-z0-9]{24})|(\/reset-password)|(\/lokacija\/[a-z0-9]{24})|(\/)|(\/uporabnik\/[a-z0-9]{24})/, (req, res, next) => {
   res.sendFile(path.join(__dirname, 'app_public', 'build', 'index.html'));
 });
 

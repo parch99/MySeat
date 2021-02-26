@@ -7,6 +7,7 @@
         </div>
     </div>
   </div><br><br>
+  
   <div class="buttons text-center" [ngSwitch]="jePrijavljen()">
     <button (click)="obrazecZaRestPrikazan=true" *ngSwitchCase="true" class="btn-hover color-6" >Add a Restaurant</button>
     <button routerLink="/prijava" *ngSwitchDefault class="btn-hover color-6">Sign in to Add a Restaurant</button>
@@ -98,29 +99,44 @@
     </div><br><br>
 
   <main class="RestaurantList">
-    <section class="section-1">
-          <div class="alert alert-warning" [hidden]="!sporocilo">{{sporocilo}}</div>
-            <div class="restaurants">
-                <div class="container" *ngFor="let lokacija of lokacije">
-                    <a routerLink="/lokacija/{{lokacija._id}}">
-                        <div class="restaurant">
-                            <p style="float: right;" class="comment">
-                                {{lokacija.razdalja | razdalja}}
-                            </p>
-                            <a class="restaurant-link">
-                                <p style="float: left;" class="slika">
-                                    <img class="slika" src="https://uploads.turbologo.com/uploads/design/hq_preview_image/959900/draw_svg20200926-13815-123nwtm.svg.png">
-                                </p>
-                                <span class="text">{{lokacija.naziv}}</span>
-                            </a>
-                            <p class="sub-text">{{lokacija.naslov}}</p>
-                            <small class="stars">
-                                <app-zvezdice [ocena]="lokacija.ocena"></app-zvezdice>
-                            </small>
-                        </div>
-                    </a>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="input-group">
+                    <input type="text" name="search"class="form-control rounded" placeholder="Search" aria-label="Search"
+                      aria-describedby="search-addon" [(ngModel)]="searchText" />
+                    <button type="button" style="font-size: 11px; font-weight: 300; font-family: sans-serif;"
+                    class="btn btn-outline-primary">SEARCH</button>
                 </div>
             </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+    
+    <section class="section-1">
+        <div class="alert alert-warning" [hidden]="!sporocilo">{{sporocilo}}</div>
+        <div class="restaurants">
+            <div class="container" *ngFor="let lokacija of lokacije | filter:searchText">
+                <a routerLink="/lokacija/{{lokacija._id}}">
+                    <div class="restaurant">
+                        <p style="float: right;" class="comment">
+                            {{lokacija.razdalja | razdalja}}
+                        </p>
+                        <a class="restaurant-link">
+                            <p style="float: left;" class="slika">
+                                <img class="slika" src="https://uploads.turbologo.com/uploads/design/hq_preview_image/959900/draw_svg20200926-13815-123nwtm.svg.png">
+                            </p>
+                            <span class="text">{{lokacija.naziv}}</span>
+                        </a>
+                        <p class="sub-text">{{lokacija.naslov}}</p>
+                        <small class="stars">
+                            <app-zvezdice [ocena]="lokacija.ocena"></app-zvezdice>
+                        </small>
+                    </div>
+                </a>
+            </div>
+        </div>
       </section>
   </main>
 </body>

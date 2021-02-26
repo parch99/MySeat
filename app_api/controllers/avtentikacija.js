@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const Uporabnik = mongoose.model('Uporabnik');
 const crypto = require('crypto');
 const nodemailer = require('nodemailer');
+const jwt = require('express-jwt');
 
 const registracija = (req, res) => {
     if (!req.body.ime || !req.body.elektronskiNaslov || !req.body.geslo) {
@@ -81,18 +82,19 @@ const sendRecoveryEmail = (req, res) => {
     })
 }
 const resetPassword = (req, res) => {
-  if (!req.body.email || !req.body.password1)
+  console.log("--imhere---");
+  if (!req.body.elektronskiNaslov || !req.body.geslo)
     return res.status(400).json({"sporočilo": "All fields are required"});
-  if (!(/(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/.test(req.body.email)))
+  if (!(/(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/.test(req.body.elektronskiNaslov)))
     return res.status(400).json({"sporočilo": "This is not a valid email address"});
-  Uporabnik.findOne({elektronskiNaslov: req.body.email})
+  Uporabnik.findOne({elektronskiNaslov: req.body.elektronskiNaslov})
     .then(user => {
       if(!user) 
         return res.status(404).json({"sporočilo": "User with this email address does not exist"});
       if(user.reset_token_exp <= new Date()){
         return res.status(404).json({"sporočilo": "Token has expired"});
       }
-      user.nastaviGeslo(req.body.password1);
+      user.nastaviGeslo(req.body.geslo);
       user.save(error => {
         if (error) {
           if (error.name == "MongoError" && error.code == 11000)
@@ -104,10 +106,21 @@ const resetPassword = (req, res) => {
       });
     });
 }
+const resetPasswordGetuserid = (req, res) => {
+  Uporabnik.findOne({reset_token: req.params.token}).then( user => {
+    if(!user) return res.status(404).json({message: 'User not found'}); //check if correct return
+    if(user.reset_token_exp <= new Date()){
+      return res.status(401).json({"sporočilo": "Token has expired"});
+    } else {
+      return res.status(200).json({user: user});
+    }
+  })
+}
 
 module.exports = {
   registracija,
   prijava,
   sendRecoveryEmail,
-  resetPassword
+  resetPassword,
+  resetPasswordGetuserid
 };

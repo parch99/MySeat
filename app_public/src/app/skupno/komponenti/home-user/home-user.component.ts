@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { switchMap } from 'rxjs/operators';
 import { ActivatedRoute, ParamMap } from '@angular/router';
-import { MyseatPodatkiService } from '../../../myseat-podatki.service';
+import { MyseatPodatkiService } from '../../storitve/myseat-podatki.service';
 import { AvtentikacijaService } from '../../storitve/avtentikacija.service';
+import { Uporabnik } from '../../razredi/uporabnik';
 
 @Component({
   selector: 'app-home-user',
@@ -11,8 +12,7 @@ import { AvtentikacijaService } from '../../storitve/avtentikacija.service';
 })
 export class HomeUserComponent implements OnInit {
 
-  constructor(private myseatPodatkiStoritev: MyseatPodatkiService, 
-              private pot: ActivatedRoute,
+  constructor(private myseatPodatkiStoritev: MyseatPodatkiService, private pot: ActivatedRoute,
               private avtentikacijaStoritev: AvtentikacijaService
   ) { }
 
@@ -22,7 +22,8 @@ export class HomeUserComponent implements OnInit {
     this.pot.paramMap
       .pipe(
         switchMap((params: ParamMap) => {
-          let idUporabnika = this.avtentikacijaStoritev.vrniIdTrenutnegaUporabnika();
+          console.log(params);
+          let idUporabnika = params.get('idUporabnika')
           return this.myseatPodatkiStoritev.pridobiPodrobnostiUporabnika(idUporabnika);
         })
       )
@@ -33,12 +34,3 @@ export class HomeUserComponent implements OnInit {
 
 }
 
-export class Uporabnik {
-  _id: string;
-  ime: string;
-  spol: string;
-  email: string;
-  geslo: string;
-  lastnik: string;
-  recentlyVisited: any[];
-}

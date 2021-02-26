@@ -19,10 +19,11 @@ export class AccountRecoveryComponent implements OnInit {
     this.errorMessage = "";
     if (!this.resetEmailData.elektronskiNaslov)
       this.errorMessage = "All fields are required!";
-    else
+    else {
       this.sendEmail();
+    }
   }
-
+  
   public sendEmail(): void {
     this.errorMessage = "";
     this.successMessage = "";
@@ -36,7 +37,7 @@ export class AccountRecoveryComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    
   }
 }
 

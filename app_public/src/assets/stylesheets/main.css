@@ -4,7 +4,6 @@
 * {
    box-sizing: border-box;
 }
-
 section {
    overflow-x: hidden;
 }
@@ -24,19 +23,15 @@ header a {
    font-size: 0.9em;
    color: whitesmoke;
 }
-
 header {
    background: var(--reversebggradient);
 }
-
 header .nav-item {
    padding: 0.9em;
 }
-
 header .navbar-brand {
    padding-left: 8rem;
 }
-
 header .nav-link:hover {
    color: rgb(62, 0, 133);
 }
@@ -612,12 +607,9 @@ position: relative;
 .empty{
   color: lightgray;
 }
-
-
 /* RESTAURANT PAGE */
 
 /*RESTAURANT LIST */
-
 .RestaurantList .section-1 {
    background-color: white;
    background-repeat: no-repeat;
@@ -640,11 +632,9 @@ position: relative;
    margin-bottom: 14vmin;
    margin-top: 8vmin;
 }
-
 .RestaurantList .restaurants {
    position: relative;
 }
-
 .RestaurantList .restaurant {
    position: center;
    height: 100px;
@@ -652,13 +642,10 @@ position: relative;
    padding: 10px;
    margin-bottom: 40px;
 }
-
 .RestaurantList .slika {
    height: 80px;
-   
    margin-right: 1.5vmin;
 }
-
 .restname {
    height: 35vmin;
    background: #dd2476;
@@ -676,18 +663,15 @@ position: relative;
    font-weight: bold;
    padding: 7vmin 21vmin;
 }
-
 .RestaurantList .text {
    font-size: 23px;
    color: whitesmoke;
    padding: 0px;
    text-overflow: ellipsis;
 }
-
 .RestaurantList .text:hover {
    color: black;
 }
-
 .RestaurantList .sub-text {
    font-size: 14px;
    color: whitesmoke;
@@ -695,16 +679,13 @@ position: relative;
    padding: 0px;
    text-overflow: ellipsis;
 }
-
 .RestaurantList .stars {
    color: whitesmoke;
 }
-
 .RestaurantList .restaurant-link:hover {
    color: black;
    text-decoration: none;
 }
-
 .RestaurantList .comment {
    padding: 3px;
    background-color: white;
@@ -731,20 +712,118 @@ position: relative;
    font-weight: bold;
    color: #cccccc;
 }
-
 .venue .image-preview__image {
    display: none;
    width: 100%;
 }
-
 .venue .text-center {
    margin-top: 30px;
    font-family: var(--Rubik);
    font-weight: bolder;
 }
-
 .venue .form-group {
    font-family: var(--Rubik);
    font-weight: bold;
 }
 /*CREATE NEW VENUE*/
+
+/* REGISTRATION SIGNUP */
+.registersignup {
+	background-color: whitesmoke;
+}
+
+.registersignup .form-control {
+	height: 35px;
+	border:1px solid rgb(179, 179, 179);
+}
+.registersignup .form-control, .btn {        
+	border-radius: 3px;
+}
+.registersignup .signup-form{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 350px;
+	min-width: 350px;
+}
+.registersignup .signup-form form {
+	color: rgb(0, 0, 0);
+	font-weight:600;
+	font-size: 16px;
+	border-radius: 3px;
+	margin-bottom: 11px;
+	margin-top: 15px;
+	background: #fff;
+	box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.15);
+	padding: 30px;
+}
+.registersignup .signup-form form label{
+	margin-bottom: 5px;
+}
+.registersignup .signup-form hr  {
+	margin: 0 -30px 20px;
+}    
+.registersignup .signup-form .form-group {
+	margin-bottom: 15px;
+}
+.registersignup .signup-form .btn {        
+	font-size: 16px;
+	font-weight: bold;
+   background: #ff002b;
+   border-radius: 1vmin;
+	border: none;
+   margin-bottom: 3px;
+	min-width: 140px;
+}
+.registersignup .signup-form .btn:hover, .signup-form .btn:focus {
+	background:#ec0027 !important;
+	outline: none;
+}
+.registersignup .signup-form a {
+	color: #fff;
+	text-decoration: underline;
+}
+.registersignup .signup-form a:hover {
+	text-decoration: none;
+}
+.registersignup .signup-form form a {
+	color:#ff002b;
+	text-decoration: none;
+}	
+.registersignup .signup-form form a:hover {
+	text-decoration: underline;
+}
+.registersignup .signup-form .hint-text  {
+	padding-bottom: 15px;
+	text-align: center;
+}
+.registersignup .grid--cell {
+	margin-bottom: 7px;
+	max-width: 323px;
+	min-width: 323px;
+}
+.registersignup .s-btn__google {
+    border-color: #999;
+}
+.registersignup .s-btn {
+    position: relative;
+	 display: inline-block;
+    padding: .8em;
+	 border: 1px solid;
+	 border-color: rgb(212, 212, 212);
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    outline: none;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1.15384615;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+}
+.registersignup .bar-md {
+    border-radius: 5px !important;
+}
+/* REGISTRATION SIGNUP */
