@@ -47,6 +47,7 @@ require('./app_api/konfiguracija/passport');
 var indexApi = require('./app_api/routes/index');
 
 var app = express();
+/*
 // Preusmeritev na HTTPS na Heroku
 if (process.env.NODE_ENV === 'production') {
   app.use((req, res, next) => {
@@ -55,7 +56,7 @@ if (process.env.NODE_ENV === 'production') {
     else
       next();
   });
-}
+}*/
 // Text compression
 app.use(compression());
 app.get('/events', function (req, res) {
@@ -74,6 +75,7 @@ app.get('/events', function (req, res) {
     clearInterval(timer)
   })
 });
+
 var hbs = require('express-handlebars').create({
   layoutsDir: path.join(__dirname, "app_server/views/layouts"),
   partialsDir: path.join(__dirname, "app_server/views/partials"),
