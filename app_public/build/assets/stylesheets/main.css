@@ -4,7 +4,6 @@
 * {
    box-sizing: border-box;
 }
-
 section {
    overflow-x: hidden;
 }
@@ -24,19 +23,15 @@ header a {
    font-size: 0.9em;
    color: whitesmoke;
 }
-
 header {
    background: var(--reversebggradient);
 }
-
 header .nav-item {
    padding: 0.9em;
 }
-
 header .navbar-brand {
    padding-left: 8rem;
 }
-
 header .nav-link:hover {
    color: rgb(62, 0, 133);
 }
@@ -54,7 +49,7 @@ header .nav-link:hover {
 }
 .btn-hover {
    width: 200px;
-   font-size: 16px;
+   font-size: 15px;
    font-weight: 600;
    color: #fff;
    cursor: pointer;
@@ -197,39 +192,32 @@ header .nav-link:hover {
 
 /* section 3 */
 
-/* Footer */
+/* FOOTER */
 footer {
    background: rgba(0, 0, 0, 0.75);
    overflow-x: hidden;
    padding: 14vmin 18vmin;
 }
-
 footer p>span {
    color: #ff004c;
 }
-
 footer input {
    border: none !important;
 }
-
 footer input:placeholder {
    color: white;
 }
-
 footer .input-group .input-group-text {
    background: var(--bggradient);
    border: none;
 }
-
 footer .coloumn i {
    color:#ff004c;
 }
-
 footer .coloumn i+i {
    padding: 0 0.15em;
 }
-
-/* Footer */
+/* FOOTER */
 
 /* ABOUT PAGE */
 .about .section-4 {
@@ -243,19 +231,16 @@ footer .coloumn i+i {
    font-size: 12vmin;
    font-family: var(--Lobster);
 }
-
 .about .section-4 .row .col-md-12>p {
    color: whitesmoke;
    font-size: 2vmin;
    font-weight: bold;
    padding: 3vmin 21vmin;
 }
-
 .about .section-5 .row .col-md-12>p {
    font-size: 3vmin;
    padding: 13vmin 25vmin;
 }
-
 /* ABOUT PAGE */
 
 /* HOMEUSER PAGE */
@@ -263,7 +248,6 @@ header .homeUser,
 .homeUser1 {
    overflow-x: hidden
 }
-
 main .homeUser .list_button {
    padding-top: 30px;
    padding-bottom: 50px;
@@ -275,7 +259,9 @@ main .homeUser p{
    color: whitesmoke;
    margin-top: 2vmin;
 }
-main .homeUser h1{
+main .homeUser h2{
+   font-size: 10vmin;
+   font-family: var(--Lobster);
    color: whitesmoke;
 }
 main .homeUser .list_button .venues_button {
@@ -289,7 +275,6 @@ main .homeUser .list_button .venues_button {
    display: inline-block;
    padding: 10px 50px 10px 50px;
 }
-
 .homeUser1 .Title {
    font-family: var(--Lobster);
    font-size: 2em;
@@ -298,7 +283,6 @@ main .homeUser .list_button .venues_button {
    padding: 10px;
    margin: 20px;
 }
-
 .homeUser1 .recents {
    font-family: var(--Sniglet-font);
    font-size: 1.5em;
@@ -310,23 +294,18 @@ main .homeUser .list_button .venues_button {
    margin: 20px;
    border-radius: 25px;
 }
-
 .homeUser1 .recents .venueName {
    padding: 5px;
 }
-
 .homeUser1 .recents .rating {
    padding: 5px;
 }
-
 .homeUser1 .recents .review .fa-comment-o {
    color: #2e2c2caf;
 }
-
 .homeUser1 .empty {
    color: lightgray;
 }
-
 .homeUser1 input[type="submit"] {
    border-radius: 30px;
    font-weight: bold;
@@ -338,7 +317,6 @@ main .homeUser .list_button .venues_button {
    display: inline-block;
    padding: 10px;
 }
-
 .homeUser1 input[type="datetime-local"] {
    border-radius: 30px;
    color: #dd2476;
@@ -348,7 +326,6 @@ main .homeUser .list_button .venues_button {
    display: inline-block;
    margin-bottom: 10px;
 }
-
 /* HOMEUSER PAGE */
 
 /* HOMEOWNER PAGE */
@@ -356,29 +333,24 @@ header .cssOwner,
 .cssOwner1 {
    overflow-x: hidden
 }
-
 header .cssOwner .row .col-md-12 {
    padding: 2vmin 1vmin;
    padding-bottom: 3vmin;
    font-family: var(--Rubik);
 }
-
 header .cssOwner .container .col-md-12 button {
    border-radius: 30px;
    font-weight: bold;
 }
-
 .cssOwner1 .cssOwner {
    background: linear-gradient(to bottom, #dd2476, #ff512f);
    padding: 10px;
    text-align: center;
 }
-
 .cssOwner1 .cssOwner .btn {
    padding: 10px;
    margin: 10px;
 }
-
 .cssOwner1 .reservation {
    font-family: var(--Sniglet-font);
    font-size: 1.5em;
@@ -389,13 +361,11 @@ header .cssOwner .container .col-md-12 button {
    margin: 20px;
    border-radius: 25px;
 }
-
 .cssOwner1 .reservation .userpic {
    height: 25px;
    width: 25px;
    margin-bottom: 5px;
 }
-
 .cssOwner1 .reservation_button {
    font-family: var(--Sniglet-font);
    font-size: 1.5em;
@@ -407,7 +377,6 @@ header .cssOwner .container .col-md-12 button {
    margin: 20px;
    border-radius: 25px;
 }
-
 .cssOwner1 .reservation_button .accept {
    border-radius: 30px;
    font-weight: bold;
@@ -421,7 +390,6 @@ header .cssOwner .container .col-md-12 button {
    margin-left: 20px;
    margin-right: 20px;
 }
-
 .cssOwner1 .reservation_button .decline {
    border-radius: 30px;
    font-weight: bold;
@@ -435,7 +403,6 @@ header .cssOwner .container .col-md-12 button {
    margin-left: 20px;
    margin-right: 20px;
 }
-
 .cssOwner1 .Title {
    font-family: var(--Sniglet-font);
    font-size: 2em;
@@ -444,7 +411,6 @@ header .cssOwner .container .col-md-12 button {
    padding: 10px;
    margin: 20px;
 }
-
 .cssOwner1 .reviews {
    font-family: var(--Sniglet-font);
    font-size: 1.5em;
@@ -456,37 +422,30 @@ header .cssOwner .container .col-md-12 button {
    margin: 20px;
    border-radius: 25px;
 }
-
 .cssOwner1 .reviews .userpic {
    height: 25px;
    width: 25px;
    margin-bottom: 5px;
 }
-
 .cssOwner1 .reviews .reviewer {
    padding-left: 20px;
 }
-
 .cssOwner1 .reviews .rating {
    padding-right: 20px;
 }
-
 .cssOwner1 .reviews .review {
    text-align: justify;
    padding: 20px;
 }
-
 .cssOwner1 .reviews .review .fa-comment-o {
    color: #2e2c2caf;
 }
-
 .cssOwner1 .empty {
    color: lightgray;
 }
-
 /* HOMEOWNER PAGE */
 
-/* Welcome PAGE */
+/* REST LIST PAGE */
 .page1 .section-1 {
    background-color: white;
    background-repeat: no-repeat;
@@ -495,55 +454,18 @@ header .cssOwner .container .col-md-12 button {
    padding: 12vmin 0;
    height: 700px;
 }
-
-.page1 .section-1 .wrapper {
-   text-align: center;
-}
-
-.page1 #buttons li {
-   box-shadow:inset 0px 1px 0px 0px #f5978e;
-   background-color:#dd2476;
-   border-radius:6px;
-   display:inline-block;
-   cursor:pointer;
-   color:#ffffff;
-   font-family: var(--Rubik);;
-   letter-spacing: 0.2em;
-   font-size:22px;
-   font-weight:bold;
-   padding:8px 60px;
-   text-decoration:none;
-   text-shadow:0px 1px 0px #8a0900;
-}
-
-.page1 #buttons li:hover {
-   background:linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 5%, #992119 100%);
-   background-color:rgba(0, 0, 0, 0.75);
-}
-
-.page1 #buttons:active {
-   position:relative;
-   top:1px;
-}
-
-.page1 #buttons li a:hover {
-   text-decoration: none;
-   text-decoration-color: white;
-}
-
 .page1 a, a:link, a:visited {
    color: white;
    text-decoration: none;
 }
-
-.page1 .section-1>h1 {
+.page1 .section-1>h2 {
    color: #dd2476;
    font-family: var(--Rubik);
-   font-size: 4.0em;
+   font-size: 10vmin;
    font-weight: bold;
    margin-bottom: 80px;
 }
-/* Welcome PAGE */
+/* REST LIST PAGE */
 
 /* RESTAURANT PAGE */
 .eachrestname {
@@ -685,12 +607,9 @@ position: relative;
 .empty{
   color: lightgray;
 }
-
-
 /* RESTAURANT PAGE */
 
 /*RESTAURANT LIST */
-
 .RestaurantList .section-1 {
    background-color: white;
    background-repeat: no-repeat;
@@ -713,11 +632,9 @@ position: relative;
    margin-bottom: 14vmin;
    margin-top: 8vmin;
 }
-
 .RestaurantList .restaurants {
    position: relative;
 }
-
 .RestaurantList .restaurant {
    position: center;
    height: 100px;
@@ -725,13 +642,10 @@ position: relative;
    padding: 10px;
    margin-bottom: 40px;
 }
-
 .RestaurantList .slika {
    height: 80px;
-   
    margin-right: 1.5vmin;
 }
-
 .restname {
    height: 35vmin;
    background: #dd2476;
@@ -749,18 +663,15 @@ position: relative;
    font-weight: bold;
    padding: 7vmin 21vmin;
 }
-
 .RestaurantList .text {
    font-size: 23px;
    color: whitesmoke;
    padding: 0px;
    text-overflow: ellipsis;
 }
-
 .RestaurantList .text:hover {
    color: black;
 }
-
 .RestaurantList .sub-text {
    font-size: 14px;
    color: whitesmoke;
@@ -768,16 +679,13 @@ position: relative;
    padding: 0px;
    text-overflow: ellipsis;
 }
-
 .RestaurantList .stars {
    color: whitesmoke;
 }
-
 .RestaurantList .restaurant-link:hover {
    color: black;
    text-decoration: none;
 }
-
 .RestaurantList .comment {
    padding: 3px;
    background-color: white;
@@ -804,20 +712,118 @@ position: relative;
    font-weight: bold;
    color: #cccccc;
 }
-
 .venue .image-preview__image {
    display: none;
    width: 100%;
 }
-
 .venue .text-center {
    margin-top: 30px;
    font-family: var(--Rubik);
    font-weight: bolder;
 }
-
 .venue .form-group {
    font-family: var(--Rubik);
    font-weight: bold;
 }
 /*CREATE NEW VENUE*/
+
+/* REGISTRATION SIGNUP */
+.registersignup {
+	background-color: whitesmoke;
+}
+
+.registersignup .form-control {
+	height: 35px;
+	border:1px solid rgb(179, 179, 179);
+}
+.registersignup .form-control, .btn {        
+	border-radius: 3px;
+}
+.registersignup .signup-form{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 350px;
+	min-width: 350px;
+}
+.registersignup .signup-form form {
+	color: rgb(0, 0, 0);
+	font-weight:600;
+	font-size: 16px;
+	border-radius: 3px;
+	margin-bottom: 11px;
+	margin-top: 15px;
+	background: #fff;
+	box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.15);
+	padding: 30px;
+}
+.registersignup .signup-form form label{
+	margin-bottom: 5px;
+}
+.registersignup .signup-form hr  {
+	margin: 0 -30px 20px;
+}    
+.registersignup .signup-form .form-group {
+	margin-bottom: 15px;
+}
+.registersignup .signup-form .btn {        
+	font-size: 16px;
+	font-weight: bold;
+   background: #ff002b;
+   border-radius: 1vmin;
+	border: none;
+   margin-bottom: 3px;
+	min-width: 140px;
+}
+.registersignup .signup-form .btn:hover, .signup-form .btn:focus {
+	background:#ec0027 !important;
+	outline: none;
+}
+.registersignup .signup-form a {
+	color: #fff;
+	text-decoration: underline;
+}
+.registersignup .signup-form a:hover {
+	text-decoration: none;
+}
+.registersignup .signup-form form a {
+	color:#ff002b;
+	text-decoration: none;
+}	
+.registersignup .signup-form form a:hover {
+	text-decoration: underline;
+}
+.registersignup .signup-form .hint-text  {
+	padding-bottom: 15px;
+	text-align: center;
+}
+.registersignup .grid--cell {
+	margin-bottom: 7px;
+	max-width: 323px;
+	min-width: 323px;
+}
+.registersignup .s-btn__google {
+    border-color: #999;
+}
+.registersignup .s-btn {
+    position: relative;
+	 display: inline-block;
+    padding: .8em;
+	 border: 1px solid;
+	 border-color: rgb(212, 212, 212);
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    outline: none;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1.15384615;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+}
+.registersignup .bar-md {
+    border-radius: 5px !important;
+}
+/* REGISTRATION SIGNUP */

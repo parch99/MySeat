@@ -9,14 +9,14 @@
    }
 
    .section-1 .row .col-md-6 .panel {
-      position: initial;
+      position: relative;
       width: initial;
       height: initial;
    }
 
-   .section-1 .row .col-md-6 .city img {
+   .section-1 .row .col-md-7 .city img {
       margin-left: -5vmin;
-      width: 115%;
+      width: 135%;
       border-radius: 0.2em;
    }
 
