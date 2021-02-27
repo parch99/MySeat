@@ -52,7 +52,7 @@ var transporter = nodemailer.createTransport({
   service: 'hotmail',
   auth: {
     user: 'stefi__stefan@hotmail.com',
-    pass: 'PUMPkin3301#'
+    pass: 'process.env.hotmailpw'
   }
 });
 
