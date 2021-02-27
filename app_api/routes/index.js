@@ -651,7 +651,7 @@ router.get('/google', passport.authenticate('google', { scope: ['profile', 'emai
 router.get('/google/callback', passport.authenticate('google', { failureRedirect: '/', session: false, }),
    function(req,res){
       if(req.user){
-        return res.redirect(303, 'http://localhost:4200/prijava/google/' +req.user.generirajJwt());
+        return res.redirect(303, 'https://myseat-sp-2020-2021.herokuapp.com/prijava/google/' +req.user.generirajJwt());
       } else {
         return res.status(400).json({message:"Not found"});
       }
