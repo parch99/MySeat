@@ -8,7 +8,7 @@ const naslovKreiraj = (req, res) => {
     Naslov.findOne({elektronskiNaslov: req.body.elektronskiNaslov})
         .then(naslov => {
             if(naslov) 
-              return res.status(404).json({"sporočilo": "User with this email address has already subscribed"});
+              return res.status(409).json({"sporočilo": "User with this email address has already subscribed"});
             else {
                 Naslov.create({
                     elektronskiNaslov: req.body.elektronskiNaslov
