@@ -73,7 +73,7 @@ const sendRecoveryEmail = (req, res) => {
           from:'"MySeat" <stefi__stefan@hotmail.com>',
           subject:"Password Reset", // CHANGE URL ON DEPLOY
           html:`<h3>You requested a password reset on MySeat</h3> 
-          <h3>Click on this <a href="http://localhost:4200/reset/${resettoken}">link</a> to proceed, If this
+          <h3>Click on this <a href="https://myseat-sp-2020-2021.herokuapp.com/reset/${resettoken}">link</a> to proceed, If this
           was not requested by you please take action and change your password</h3>
           <h3>It will expire in 20 minutes`
         }) 
@@ -82,7 +82,6 @@ const sendRecoveryEmail = (req, res) => {
     })
 }
 const resetPassword = (req, res) => {
-  console.log("--imhere---");
   if (!req.body.elektronskiNaslov || !req.body.geslo)
     return res.status(400).json({"sporočilo": "All fields are required"});
   if (!(/(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/.test(req.body.elektronskiNaslov)))

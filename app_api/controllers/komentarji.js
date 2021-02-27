@@ -85,7 +85,6 @@ const komentarjiPosodobiIzbranega = (req, res) => {
         .select('komentarji')
         .exec((napaka, lokacija) => {
             if (!lokacija) {
-                console.log("---------------------------");
                 return res.status(404).json({ "sporočilo": "Ne najdem lokacije." });
             } else if (napaka) {
                 return res.status(500).json(napaka);
@@ -93,7 +92,6 @@ const komentarjiPosodobiIzbranega = (req, res) => {
             if (lokacija.komentarji && lokacija.komentarji.length > 0) {
                 const trenutniKomentar = lokacija.komentarji.id(req.params.idKomentarja);
                 if (!trenutniKomentar) {
-                    console.log("--------------tren-------------");
                     res.status(404).json({ "sporočilo": "Ne najdem komentarja." });
                 } else {
                     if(req.body.ocena)
@@ -102,7 +100,6 @@ const komentarjiPosodobiIzbranega = (req, res) => {
                       trenutniKomentar.besediloKomentarja = req.body.komentar;
                     lokacija.save((napaka, lokacija) => {
                         if (napaka) {
-                            console.log("--------------najd-------------");
                             res.status(404).json(napaka);
                         } else {
                             posodobiPovprecnoOceno(lokacija._id);
