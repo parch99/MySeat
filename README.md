@@ -1,177 +1,160 @@
-# Spletno programiranje 2020/2021
-
-Lastni projekt pri predmetu **Spletno programiranje** v študijskem letu **2020/2021**.
-
-
 ## 1. LP
 
-Predstavljamo "MySeat", spletno aplikacijo z namenom rezervacije mize v kateri koli restavraciji / baru / kavarni v Ljubljani.
-V kompletu s pregledi, ocenami in obsegom cen vam ponujamo najboljši način, da rezervirate mizo za naslednje kosilo ali nočni izlet.
-Če ste uporabnik, se lahko prijavite in rezervirate mizo na enem od nedavnih lokacij, ki ste jih obiskali, 
-na bližnjem kraju, ko ne želite iti daleč, ali izberite katerega koli s seznama lokacij, tako da jih razvrstite po svojih željah.
-Če ste lastnik mesta, se prijavite kot eden in lahko boste sprejeli ali zavrnili rezervacije ter preverili, kako je z vašim mestom. 
-Sistem za pošiljanje sporočil bo na voljo bodisi znotraj aplikacije bodisi po e-pošti, če v aplikaciji ne želite preveriti stanja svoje rezervacije. 
-Vse, kar potrebujete, da rezervirate mizo na enem mestu.
+We present "MySeat", a web application for the purpose of booking a table in any restaurant in Ljubljana.
+Complete with reviews, ratings and price range, we offer you the best way to book a table for your next lunch or night out.
+If you are a user, you can log in and book a table at one of the recent locations you have visited.
+in a nearby place when you don’t want to go far, or choose any from a list of locations by sorting them to your liking.
+If you own a site, sign up as one and you will be able to accept or reject reservations and check how it is with your city.
+The messaging system will be available either within the app or via email if you do not want to check the status of your booking in the app.
+Everything you need to book a table in one place.
 
-Zaslonske maske:
+Screens:
 
-1. Default Homepage - Stran, ki se prikaže, ko prvič odprete spletno aplikacijo in še niste bili prijavljeni.
-  Gre za splošno prvo stran, ki ponuja nekaj osnovnih informacij o spletni aplikaciji, kako jo uporabljati, 
-  in vas spodbuja, da se prijavite in prenesete našo mobilno aplikacijo. 
-  Vsebuje povezave do strani s seznamom vseh lokacij, do naša About-Page in do strani za prijavo.
+1. Default Homepage - The page that appears when you first open a web application and have not yet logged in.
+  This is a general first page that provides some basic information about the web application, how to use it,
+  and encourages you to sign up and download our mobile app.
+  It contains links to a page with a list of all locations, to our About-Page and to the login page.
   (index.html)
   
-2. User Homepage - Stran, ki se prikaže, ko odprete spletno aplikacijo in ste prijavljeni kot uporabnik.
-  Vsebuje gumb, ki vas pripelje na seznam lokacij, nekaj nedavnih lokacij, ki ste jih obiskali, in hiter obrazec za rezervacijo mize na kateri koli od njih
-  ter zemljevid, ki prikazuje bližnje lokacije, če ste dovolili aplikacijo, da ogleda vašo trenutno lokacijo.
-  Vsebuje povezave do strani s seznamom vseh lokacij, stran z vsemi vašimi preteklimi / trenutnimi / prihodnjimi rezervacijami in do naša About-Page.
-  (homeUser.html)
+2. User Homepage - The page that appears when you open a web application and are logged in as a user.
+  It contains a button that takes you to a list of locations, some recent locations you’ve visited, and a quick table booking form at any of them
+  and a map showing nearby locations if you have allowed the application to view your current location.
+  It contains links to a page with a list of all locations, a page with all your past / current / future reservations and to our About-Page.
   
-3. Owner Homepage - Stran, ki se prikaže, ko odprete spletno aplikacijo in ste prijavljeni kot lastnik lokacij.
-  Ima dva gumba, enega, ki vas pripelje do vaših rezervacij, ki čakajo, in enega, ki vas pripelje na vašo lokacijsko stran. 
-  Nadalje lahko hitro dostopate do nedavnih rezervacij in jih sprejmete ali zavrnete ter si ogledate tudi nekatere nedavne ocene vaše lokacije.
-  Vsebuje povezave do stran z vsemi vašimi rezervacijami, stran z vašem lokaciji in do naša About-Page.
-  (homeOwner.html)
+3. Owner Homepage - The page that appears when you open the web application and are logged in as the site owner.
+  It has two buttons, one that takes you to your pending bookings and one that takes you to your location page.
+  Furthermore, you can quickly access and accept recent bookings and reject them, as well as view some recent estimates of your location.
+  It contains links to the page with all your reservations, the page with your location and to our About-Page.
   
-4. Login/Signup Page - Stran, sestavljena iz 2 mask, na kateri se lahko v svoj račun prijavite ali ustvarite nov račun kot uporabnik ali lastnik.
-  (signup.html) (login.html)
+4. Login / Signup Page - A page consisting of 2 masks on which you can log in to your account or create a new account as a user or owner.
 
-5. Venue List Page - Stran, sestavljena iz 2 mask. V prvem delu je seznam, kjer lahko izberete, ali iščete restavracijo, bar ali kavarno. 
-  Potem boste preusmerjeni na seznam izbranih lokacij, kjer lahko poiščete določeno lokacijo, jih razvrstite po določenih kriterijih ali pa 
-  se preprosto pomikate, dokler ne najdete želene lokacije. Vsebuje povezave kot domače strani, odvisno od tega, ali ste prijavljeni ali ne.
-  (page1.html) (restaurant-list.html)
+5. Venue List Page - A page consisting of 2 masks. In the first part there is a list where you can choose whether you are looking for a restaurant, bar or cafe.
+  You will then be redirected to a list of selected locations where you can find a specific location, sort them by specific criteria, or
+  you simply scroll until you find the desired location. It contains links as home pages, depending on whether you are logged in or not.
 
-6. Individual page list - Posamezna stran za vsako lokacijo, ki vključuje njihovo ceno, oceno, delovni čas, zemljevid lokacije, 
-  pisne ocene in seveda gumb za rezervacijo. Za rezervacijo morate biti prijavljeni, ocene pa lahko pišete kot anonimne.
-  (RestaurantPage.html)
+6. Individual page list - An individual page for each location, including their price, estimate, opening hours, location map,
+  written reviews and of course the booking button. You must be logged in to make a reservation, and you can write reviews as anonymous.
   
-7. Map page - Stran, kjer si lahko ogledate zemljevid in izberete lokacijo na zemljevidu.
-  (map.html)
+7. Map page - A page where you can view a map and select a location on the map.
 
-8. About page - Stran, kjer si lahko ogledate nekaj informacij o nas in spletni aplikaciji ter nekaj pogostih vprašanj (FAQ).
-  (about.html)
+8. About page - A page where you can see some information about us and the web application and some frequently asked questions (FAQ).
 
-Funkcionalnosti:
+Functionalities:
 
-Integrirana dostava e-poštnih obvestil. Ko bo lokacija obveščena o vašem poskusu rezervacije, pa tudi kadar bo lokacija sprejela ali zavrnila vašo rezervacijo, 
-boste o tem obveščeni. Če ste lastnik, boste hkrati obveščeni o vsaki rezervaciji za vašo lokacijo ali pisanju mnenja.
+Integrated delivery of email notifications. When the location is notified of your booking attempt, as well as when the location accepts or rejects your booking,
+you will be notified. If you are the owner, you will be notified at the same time of any booking for your location or writing a review.
 
-Imeli bomo integriran sistem sporočanja, kjer bodo lastniki in uporabniki lahko komunicirali v primeru težav.
-Za vsak odgovor na sporočilo lahko prejmete tudi e-poštno obvestilo.
+We will have an integrated messaging system where owners and users will be able to communicate in case of problems.
+You may also receive an email notification for each response to a message.
 
-Za zunanji vir bomo uporabili vremenski API, ki vam bo pomagal, da se odločite, ali bo vreme lepo iti ven. V ljubljani je znanje vremena nujno.
+For an external source, we will use the weather API to help you decide if the weather will be nice to go out. In Ljubljana, knowledge of the weather is essential.
 
 ## 2. LP
-Spletna stran/aplikacija "My Seat" deluje brezhibno na računalnik, smartphone in tabletni računalnik.
+The "My Seat" website / app works flawlessly on PC, smartphone and tablet.
 
-Seznam zaslonskih mask, kjer lahko uporabnik posreduje podatke in katere podatke lahko vnese.
+A list of screen masks where the user can provide data and what data they can enter.
 
-1.Login/Singup page
+1.Login / Singup page
           
-    -Singup 
-        Na zaslonsko masko singup uporabnik lahko ustvari svoji račun. V polje "First name" uporabnik mora vpisati njegovo ime,
-        v polje "Last name" uporabnik mora vpisati njegov priimek. V ta dva polja dovoljen je samo vnos črke a-z in črke A-Z. 
-        Naslednjo polje je "Email address", tamo uporabnik da svoji elektronski naslov na kateri bo ustvaril svoji uporabniški 
-        račun, v to polje uporabnik lahko uporablja črke od a-z, števila od 1-9, karaktere "+","-",".","_", potem mora dati 
-        karakter "@", pa potem lahko uporablja črke od a-z, števila od 1-9, karaktere "-" in ".".. Potem pride polje "Password" 
-        kjer uporabnik vpise svoje geslo ki bo kasneje uporabljal skupaj z Email ki je prej vpisal kako se bo logiral v svoji 
-        uporabniški račun na Login zaslon. Geslo mora vsebovati najmanj 8 karaktere iz katere en mora biti veliko črko, en 
-        majhno črko, en število pa en neki spiecijalni karakter. Zadnja opcija ki uporabnik lahko odabere na ta zaslon je 
-        "Log in as owner", uporabnik to potrdi če želi da račun ki ustvarja bo račun za restavracijo. 
+    -Singup
+        On the screen screen singup the user can create their own account. In the "First name" field, the user must enter his name,
+        in the "Last name" field, the user must enter his last name. Only the letter a-z and the letter A-Z are allowed in these two fields.
+        The next field is "Email address", where the user gives his email address where he will create his username
+        account, in this field the user can use letters from a-z, numbers from 1-9, characters "+", "-", ".", "_", then he must give
+        the "@" character, then it can use the letters from a-z, the numbers from 1-9, the characters "-" and "." .. Then comes the "Password" field
+        where the user enters his password which he will later use together with the Email who previously entered how he will log in to his
+        user account on the Login screen. The password must contain at least 8 characters of which one must be a capital letter, one
+        a lowercase letter, and one number one special character. The last option that the user can select on this screen is
+        "Log in as owner", the user confirms this if he wants the account he is creating to be the restaurant bill.
 
             
           
     -Login
-        Če uporabnik se želi logirati najprej mora imeti ustvarljen račun tj signup. Na zaslon Login uporabnik lahko vnese v 
-        polje "Email address" svoji elektronski naslov, v to polje uporabnik lahko uporablja črke od a-z, števila od 1-9, 
-        karaktere "+","-",".","_", potem mora dati karakter "@", pa potem lahko uporablja črke od a-z, števila od 1-9, 
-        karaktere "-" in ".". V polje "Password" svoje geslo. Geslo bo prekriveno z zvezdice iz varnostne razloge. Geslo mora 
-        vsebovati najmanj 8 karaktere iz katere en mora biti veliko črko, en majhno črko, en število pa en neki spiecijalni 
-        karakter. Potem če se uporabnik želi prijaviti kot gost nadaljuje naprej s pritiskom na gumb "Login", če se želi 
-         prijaviti kot restavracija, mora najprej potrditi polje "Login as restaurant".
+        If the user wants to log in, he must first have an account created, ie a signup. On the Login screen, the user can type in
+        field "Email address" his e-mail address, in this field the user can use letters from a-z, numbers from 1-9,
+        characters "+", "-", ".", "_", then it must give the character "@", and then it can use letters from a-z, numbers from 1-9,
+        characters "-" in ".". In the "Password" field your password. The password will be covered with an asterisk for security reasons. The password must
+        contain at least 8 characters of which one must be uppercase, one must be lowercase, and one number must be one special letter
+        character. Then if the user wants to log in as a guest proceed further by pressing the "Login" button if desired
+         to register as a restaurant, you must first check the "Login as restaurant" box.
 
-2.Individual page list - Zasebna stran za določeno restavracijo
+2.Individual page list (master detail) - A private page for a specific restaurant
     
-        To je zasebna stran za vsako restavracijo kjer uporabnik lahko prebere komentarje za doloćeno restavracijo, restaurant rate 
-        pa še money cost rate. Na ta zaslon uporabnik lahko spremeni oblik zemljevida in lahko pritisne gumb "Add comment" ki bo 
-        otprel nov zaslon kjer uporabnik lahko vpiše svoji komentar.
+        This is a private page for each restaurant where the user can read the comments for a particular restaurant, restaurant rate
+        and money cost rate. On this screen the user can change the map shapes and can press the "Add comment" button which will
+        opened a new screen where the user can enter their comment.
 
         -Add comment page
-            Do tega zaslona pridemo preko gumb "Add comment" na zasebno stran restravracije. Na to stran uporabnik mora vpisati v 
-            polje "Your Name" svoje ime, lahko tudi in priimek. V polje "Add new comment" uporabnik vpiše svoji komentar za določeno 
-            restavracijo. Naslednjo polje je polje "Your rate", tukaj uporabnik lahko odabere število med 1 in 5 z katero bo dal 
-            oceno za restavracijo v celoti. Zadnje polje je polje "Price (1 Cheap - 3 Expensive)", tukaj uporabnik lahko odabere 
-            število med 1,2 in 3. 1 pomeni da je restavracija poceni, 2 pomeni da so cene normalne, 3 pa da je restavracija draga. 
+            This screen is accessed via the "Add comment" button on the private page of the restaurant. On this page the user must type in
+            field "Your Name" your name, you can also and last name. In the field "Add new comment" the user enters his comment for a specific
+            restaurant. The next field is the "Your rate" field, here the user can choose the number between 1 and 5 with which to give
+            rating for the restaurant as a whole. The last field is the field "Price (1 Cheap - 3 Expensive)", here the user can choose
+            a number between 1.2 and 3. 1 means the restaurant is cheap, 2 means the prices are normal, and 3 means the restaurant is expensive.
 
-3.Zaslon Restaurants - seznam restavracije
+3. Screens Restaurants - list of restaurants
 
-        Če je uporabnik prijavljen kot restavracija na vrhu strani bo imel gumb "Add new restaurant" kjer lahko uporabnik lahko 
-        kreira zaslon za svojo restavracijo in poda podatke.
+        If the user is logged in as a restaurant at the top of the page he will have a "Add new restaurant" button where the user can
+        creates a screen for your restaurant and provides data.
 
         -Add new restaurant page
-          Do tega zaslona pridemo preko gumb "Add new restaurant" na stran Restaurants če smo prijavljeni kot na računu kot 
-          restavracija.
-          -Uporabnik mora dopolniti naslednja polja.
-             -"Restauran name:", tukaj uporabnik vpiše ime svoje restavracije.
-             -"Restauran address:", tukaj uporabnik vpiše naslov na kateri se nahaja njegova restavracija.
-             -"Coordinates Longitude:", tukaj uporabnik vpiše dolžina koordina v obliki "12.123032".
-             -"Coordinates Latitude:", tukaj uporabnik vpiše širina koordina v obliki "46.123032".
-             -"Working Hours Monday - Friday:", tukaj uporabnik vpiše delovni čas od ponedeljek do petek v obliki "12:00 - 23:00".
-             -"Working Hours Saturday:", tukaj uporabnik vpiše delovni čas v soboto v obliki "12:00 - 23:00".
-             -"Working Hours Sunday:", tukaj uporabnik vpiše delovni čas v nedeljo v obliki "12:00 - 23:00".
-             -"Phone number:", tukaj uporabnik vpiše kontaktna telefonska številka v obliki  "069 123 456", lahko tudi uporablja 
-             znaki kot "+" in "( )".
+          You can get to this screen via the "Add new restaurant" button on the Restaurants page if you are logged in as on the account as
+          restaurant.
+          -The user must complete the following fields.
+             - "Restauran name:", here the user enters the name of his restaurant.
+             - "Restauran address:", here the user enters the address where his restaurant is located.
+             - "Coordinates Longitude:", here the user enters the coordinate length in the form "12.123032".
+             - "Coordinates Latitude:", here the user enters the width of the coordinate in the form "46.123032".
+             - "Working Hours Monday - Friday:", here the user enters the working hours from Monday to Friday in the form "12:00 - 23:00".
+             - "Working Hours Saturday:", here the user enters the working hours on Saturday in the form "12:00 - 23:00".
+             - "Working Hours Sunday:", here the user enters the working hours on Sunday in the form "12:00 - 23:00".
+             - "Phone number:", here the user enters the contact telephone number in the form "069 123 456", he can also use
+             characters like "+" and "()".
 
-    - Opis uporabljene npmjs knjižice
+    - Description of the npmjs booklet used
 
-        - JWT se uporablja kdaj je uporabnik prijavljen na svojega uporabniška računa da lahko pristopi do poti,storitve in vire 
-          ki so dovoljeni s tem žetonom.
-        - NPM-AUTH se uporablja za lokalno nastavitev poverilnic v .npmrc za overjanje pred katerim koli javnim / zasebnim 
-          skladiščem NPM 
-        - ASSERT modul za uveljavljanje ponuja način testiranja izrazov. Če je izraz ovrednoten z 0 ali ni, je prišlo do napake 
-          trditve in program se zaključi.     
-          
+        - JWT is used when a user is logged in to their user accounts to be able to access routes, services and resources
+          which are allowed with this token.
+        - NPM-AUTH is used to locally configure credentials in .npmrc for authentication
 
 ## 3. LP
 
 Heroku
-Povezava do spletne aplikacija na heroku : https://myseat-sp-2020-2021.herokuapp.com \
-Namestitev aplikacije in zagon: \
-    *  git clone: https://github.com/sp-2020-2021/LP-19 \
-    *  cd LP-19 \
-    *  cd sp_express \
-    *  npm install -g heroku \
-    *  docker-compose up \
-    *  V brskalniku vpišemo: https://localhost:3000   
+Link to the web application on heroku: https://myseat-sp-2020-2021.herokuapp.com \
+Application installation and launch: \
+     * git clone: https://github.com/parch99/MySeat \
+     * npm install -g heroku \
+     * docker-compose up \
+     * In the browser, enter: https: // localhost: 3000
 
 
 ## 4. LP
 
-SPA aplikacija na eni strani
-Heroku
-Povezava do spletne aplikacija na heroku : https://myseat-sp-2020-2021.herokuapp.com \
-Namestitev aplikacije in zagon: \
-    *  git clone: https://github.com/sp-2020-2021/LP-19 \
-    *  cd LP-19 \
-    *  cd sp_express \
-    *  npm install \
-    *  npm start \
-    *  cd app_public \
-    *  npm install @angular/cli \
-    *  ng serve \
-    *  V brskalniku vpišemo: https://localhost:4200
+SPA application on one side
+
+Link to the web application on heroku: https://myseat-sp-2020-2021.herokuapp.com \
+Application installation and launch: \
+     * git clone: https://github.com/parch99/MySeat \
+     * npm install \
+     * npm start \
+     * cd app_public \
+     * npm install \
+     * ng serve \
+     * In the browser, enter: https: // localhost: 4200
 
 
 ## 5. LP
 
-Varnostno zaščitena progresivna aplikacija
+Securily protected progressive web application
 
-Aplikacija podpira 2 vrste uporabnikov:
+The application supports 2 types of users:
 
- - neprijavljen uporabnik oz. gost,
- - prijavljen uporabnik
+  - unregistered user or guest,
+  - logged in user
 
-Neprijavljen uporabnik na spletni strani lahko samo pogleda strani, na seznamu lokacije vidi razdaljo od njega, pogleda podrobnosti lokacije in komentarje lokacije, lahko ustvari nov racun in lahko vpise svoj elektronski naslov za tedenske myseat novice.
+An unregistered user on the website can only view the page, see the distance from it in the location list
+view location details and location comments, create a new account and can enter their email address for weekly
+myseat news.
 
-Prijavljen uporabnik na spletni strani lahko doda komentar, lahko doda restavracijo in lahko pristopi do svojo stran s profilom kjer pogleda v katero restavracijo je pred kratkim bil.
+A registered user on the website can add a comment, can add a restaurant and can access his profile page where
+he looks at which restaurant he has been to recently.
 
