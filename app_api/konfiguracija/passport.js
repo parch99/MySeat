@@ -34,9 +34,9 @@ passport.use(
 );
 
 passport.use(new GoogleStrategy({
-  clientID: "897848448322-vsfu67qmcb17irqkejmj3v2t68119lq0.apps.googleusercontent.com",
-  clientSecret: "yHDjNarPnU4CY9lMgta4M6v8",
-  callbackURL: "http://localhost:3000/api/google/callback",
+  clientID: process.env.CLIENTID,
+  clientSecret: process.env.CLIENT_SECRET,
+  callbackURL: "https://myseat-sp-2020-2021.herokuapp.com/api/google/callback",
   profileFields: ["id", "displayName", "email"],
 },
 function(accessToken, refreshToken, profile, done) {
