@@ -71,11 +71,11 @@ const sendRecoveryEmail = (req, res) => {
         transporter.sendMail({
           to:user.elektronskiNaslov,
           from:'"MySeat" <stefi__stefan@hotmail.com>',
-          subject:"Password Reset", // CHANGE URL ON DEPLOY
+          subject:"Password Reset", // CHANGE URL ON DEPLOY https://myseat-sp-2020-2021.herokuapp.com
           html:`<h3>You requested a password reset on MySeat</h3> 
           <h3>Click on this <a href="https://myseat-sp-2020-2021.herokuapp.com/reset/${resettoken}">link</a> to proceed, If this
           was not requested by you please take action and change your password</h3>
-          <h3>It will expire in 20 minutes`
+          <h3>The link will expire in 20 minutes`
         }) 
         res.json({"sporočilo": "Check your email for password reset"});
       })
