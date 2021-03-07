@@ -54,10 +54,10 @@ The "My Seat" website / app works flawlessly on PC, smartphone and tablet.
 
 A list of screen masks where the user can provide data and what data they can enter.
 
-1.Login / Singup page
+1.Login / Signup page
           
-    -Singup
-        On the screen screen singup the user can create their own account. In the "First name" field, the user must enter his name,
+    -Signup
+        On the screen screen signup the user can create their own account. In the "First name" field, the user must enter his name,
         in the "Last name" field, the user must enter his last name. Only the letter a-z and the letter A-Z are allowed in these two fields.
         The next field is "Email address", where the user gives his email address where he will create his username
         account, in this field the user can use letters from a-z, numbers from 1-9, characters "+", "-", ".", "_", then he must give
