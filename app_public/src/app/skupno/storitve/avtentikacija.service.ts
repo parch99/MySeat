@@ -64,6 +64,9 @@ export class AvtentikacijaService {
   public googlePrijava(token: string) {
       this.shraniZeton(token);
   }
+  public facebookPrijava(token: string) {
+    this.shraniZeton(token);
+}
   public async registracija(uporabnik: Uporabnik): Promise<any> {
     return this.myseatPodatkiStoritev
       .registracija(uporabnik)

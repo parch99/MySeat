@@ -210,12 +210,11 @@ footer input:placeholder {
 footer .input-group .input-group-text {
    background: var(--bggradient);
    border: none;
+   height: 38px;
 }
 footer .coloumn i {
    color:#ff004c;
-}
-footer .coloumn i+i {
-   padding: 0 0.15em;
+   padding-right: 5px;
 }
 /* FOOTER */
 

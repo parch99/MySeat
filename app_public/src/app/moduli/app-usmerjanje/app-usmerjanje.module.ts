@@ -41,6 +41,7 @@ const poti: Routes = [
     children: [
       { path: '', component: PrijavaComponent },
       { path: 'google/:token', component: PrijavaComponent }, 
+      { path: 'facebook/:token', component: PrijavaComponent },
     ]
   }, {
     path: 'account-recovery',

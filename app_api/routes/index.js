@@ -656,6 +656,15 @@ router.get('/google/callback', passport.authenticate('google', { failureRedirect
         return res.status(400).json({message:"Not found"});
       }
 });
+router.get('/facebook', passport.authenticate('facebook', { scope: ['email'] }));
+router.get('/facebook/callback', passport.authenticate('facebook', { failureRedirect: '/', session: false, }),
+   function(req,res){
+      if(req.user){
+        return res.redirect(303, 'https://myseat-sp-2020-2021.herokuapp.com/prijava/facebook/' +req.user.generirajJwt());
+      } else {
+        return res.status(400).json({message:"Not found"});
+      }
+});
 router.post('/send-recovery-email', ctrlAvtentikacija.sendRecoveryEmail);
 router.get('/reset-password/:token', ctrlAvtentikacija.resetPasswordGetuserid);
 router.post('/reset-password', ctrlAvtentikacija.resetPassword);

@@ -2,6 +2,7 @@ const passport = require('passport');
 const mongoose = require('mongoose');
 const LokalnaStrategija = require('passport-local').Strategy;
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
+const FacebookStrategy = require('passport-facebook').Strategy;
 const Uporabnik = mongoose.model('Uporabnik');
 
 passport.use(
@@ -37,6 +38,31 @@ passport.use(new GoogleStrategy({
   clientID: process.env.CLIENT_ID,
   clientSecret: process.env.CLIENT_SECRET,
   callbackURL: "https://myseat-sp-2020-2021.herokuapp.com/api/google/callback",
+  profileFields: ["id", "displayName", "email"],
+},
+function(accessToken, refreshToken, profile, done) {
+  Uporabnik.findOne({elektronskiNaslov: profile._json.email}).then((currentUser)=>{
+    if(currentUser){
+      //if we already have a record with the given email
+      done(null, currentUser);
+    } else{
+        //if not, create a new user 
+        new Uporabnik({
+          elektronskiNaslov: profile._json.email,
+          ime: profile._json.name,
+          email_verified: true,
+        }).save().then((novUporabnik) =>{
+          done(null, novUporabnik);
+        });
+    } 
+  })
+}
+));
+
+passport.use(new FacebookStrategy({
+  clientID: process.env.CLIENT_ID_FB,
+  clientSecret: process.env.CLIENT_SECRET_FB,
+  callbackURL: "https://myseat-sp-2020-2021.herokuapp.com/api/facebook/callback",
   profileFields: ["id", "displayName", "email"],
 },
 function(accessToken, refreshToken, profile, done) {

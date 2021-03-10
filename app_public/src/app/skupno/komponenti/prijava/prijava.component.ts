@@ -26,6 +26,12 @@ export class PrijavaComponent implements OnInit {
         this.usmerjevalnik.navigate(['/seznam-lokacije']);
        });
     }
+    if (this.usmerjevalnik.url.startsWith('/prijava/facebook')) {
+      this.route.params.subscribe(event => {
+        this.avtentikacijaStoritev.facebookPrijava(event.token)
+        this.usmerjevalnik.navigate(['/seznam-lokacije']);
+       });
+    }
    }
 
   public jePovezava(): boolean {

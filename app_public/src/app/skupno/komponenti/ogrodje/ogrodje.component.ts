@@ -65,7 +65,7 @@ export class OgrodjeComponent implements OnInit {
         })
         .catch(napaka => this.obrazecNapaka = napaka);
     } else {
-      this.obrazecNapaka = "Zahtevani so vsi podatki, prosim poskusite ponovno!";
+      this.obrazecNapaka = "Field can not be empty !";
     }
   }
   private soPodatkiUstrezniZaEmail(): boolean {
