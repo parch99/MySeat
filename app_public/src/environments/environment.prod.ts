@@ -1,4 +1,4 @@
 export const environment = {
-  apiUrl: 'https://myseat-sp-2020-2021.herokuapp.com/api',
+  apiUrl: 'https://myseat.onrender.com/api',
   production: true
 };

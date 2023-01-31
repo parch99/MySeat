@@ -28,7 +28,7 @@ var swaggerOptions = {
     },
     servers: [
       { url: "http://localhost:3000/api" },
-      { url: "https://myseat-sp-2020-2021.herokuapp.com/api" }
+      { url: "https://myseat.onrender.com/api" }
     ]
   },
   apis: [

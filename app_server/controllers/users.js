@@ -3,7 +3,7 @@ var apiParametri = {
     streznik: 'http://localhost:' + (process.env.PORT || 3000)
 };
 if (process.env.NODE_ENV === 'production') {
-    apiParametri.streznik = 'https://myseat-sp-2020-2021.herokuapp.com';
+    apiParametri.streznik = 'https://myseat.onrender.com';
 }
 
 var seznamUporabnikov = (req, res) => {
