@@ -22,9 +22,9 @@ var swaggerOptions = {
       url: "https://choosealicense.com/licenses/lgpl-3.0"
     },
     contact: {
-      name: "Mark Breznik",
+      name: "Stefan Parch",
       url: "https://www.lavbic.net",
-      email: "breznik.mark@gmail.com"
+      email: "123@gmail.com"
     },
     servers: [
       { url: "http://localhost:3000/api" },
