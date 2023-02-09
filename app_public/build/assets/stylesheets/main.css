@@ -59,14 +59,14 @@ header .nav-link:hover {
    border: none;
    background-size: 300% 100%;
 
-   moz-transition: all .4s ease-in-out;
+   /*moz-transition: all .4s ease-in-out;*/
    -o-transition: all .4s ease-in-out;
    -webkit-transition: all .4s ease-in-out;
    transition: all .4s ease-in-out;
 }
 .btn-hover:hover {
    background-position: 100% 0;
-   moz-transition: all .4s ease-in-out;
+   /*moz-transition: all .4s ease-in-out;*/
    -o-transition: all .4s ease-in-out;
    -webkit-transition: all .4s ease-in-out;
    transition: all .4s ease-in-out;
@@ -553,7 +553,7 @@ position: relative;
 .setReview {
   font-family: var(--Sniglet-font);
   font-size: 1.5em;
-  color: #ff004cfa
+  color: #ff004cfa;
   text-align: left;
   background-color: rgb(150, 59, 59);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -562,7 +562,7 @@ position: relative;
   border-radius: 25px;
 }
 .uReviews a{
-  color: #ff004cfa
+  color: #ff004cfa;
   border-radius: 30px;
   font-weight: bold;
   margin-bottom: 12vmin;
