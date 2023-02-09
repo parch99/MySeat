@@ -111,7 +111,7 @@
         },
         {
 		
-        	"avtor" : "Lana Frank",
+        	"avtor" : "Ana Frank",
         	"ocena" : 5,
         	"cost" : 1,
 		      "datum": {"$date": "2019-11-07T00:00:00Z"},
