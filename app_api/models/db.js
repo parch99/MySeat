@@ -4,6 +4,8 @@ var dbURI = 'mongodb://localhost/MySeat';
 if (process.env.NODE_ENV === 'production') {
   dbURI = process.env.MONGODB_CLOUD_URI;
 } else if (process.env.NODE_ENV === 'docker') {
+    //dbURI = 'mongodb://127.0.0.1:27017/';
+    //dbURI = 'mongodb://localhost:27017';
   dbURI = 'mongodb://sp-edugeocache-mongodb/MySeat';
 }
 
