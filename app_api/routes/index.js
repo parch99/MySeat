@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const passport = require('passport');
-
-const jwt = require('express-jwt');
+const { expressjwt: jwt } = require('express-jwt');
+//const jwt = require('express-jwt');
 const avtentikacija = jwt({
   secret: process.env.JWT_GESLO,
   userProperty: 'payload',
