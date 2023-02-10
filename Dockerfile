@@ -1,6 +1,6 @@
 FROM node:14-alpine
 
-ARG NODE_ENV=development
+ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
 
 # Privzeta mapa z aplikacijo za vse ukaze v nadaljevanju (COPY, RUN, CMD itd.)
