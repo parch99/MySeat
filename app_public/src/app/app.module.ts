@@ -21,7 +21,6 @@ import { HomeUserComponent } from './skupno/komponenti/home-user/home-user.compo
 import { MapaComponent } from './skupno/komponenti/mapa/mapa.component';
 import { RegistracijaComponent } from './skupno/komponenti/registracija/registracija.component';
 import { PrijavaComponent } from './skupno/komponenti/prijava/prijava.component';
-import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { IzbrisiIdPipe } from './skupno/cevi/izbrisi-id.pipe';
 import { NotFoundComponentComponent } from './skupno/komponenti/not-found-component/not-found-component.component';
@@ -58,8 +57,7 @@ import { PasswordResetComponent } from './skupno/komponenti/password-reset/passw
     FormsModule, 
     ReactiveFormsModule,
     Ng2SearchPipeModule,
-    AppUsmerjanjeModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    AppUsmerjanjeModule
   ],
   providers: [],
   bootstrap: [OgrodjeComponent]
