@@ -1,11 +1,12 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const router = express.Router();
 const passport = require('passport');
 const { expressjwt: jwt } = require('express-jwt');
-//const jwt = require('express-jwt');
+
 const avtentikacija = jwt({
   secret: process.env.JWT_GESLO,
-  userProperty: 'payload',
+  requestProperty: 'payload',
   algorithms: ['HS256']
 });
 
@@ -651,7 +652,7 @@ router.get('/google', passport.authenticate('google', { scope: ['profile', 'emai
 router.get('/google/callback', passport.authenticate('google', { failureRedirect: '/', session: false, }),
    function(req,res){
       if(req.user){
-        return res.redirect(303, 'https://myseat.onrender.com/prijava/google/' +req.user.generirajJwt());
+        return res.redirect(303, 'https://myseat.fly.dev/prijava/google/' +req.user.generirajJwt());
       } else {
         return res.status(400).json({message:"Not found"});
       }
@@ -660,7 +661,7 @@ router.get('/facebook', passport.authenticate('facebook', { scope: ['email'] }))
 router.get('/facebook/callback', passport.authenticate('facebook', { failureRedirect: '/', session: false, }),
    function(req,res){
       if(req.user){
-        return res.redirect(303, 'https://myseat.onrender.com/prijava/facebook/' +req.user.generirajJwt());
+        return res.redirect(303, 'https://myseat.fly.dev/prijava/facebook/' +req.user.generirajJwt());
       } else {
         return res.status(400).json({message:"Not found"});
       }

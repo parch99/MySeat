@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Uporabnik = mongoose.model('Uporabnik');
 const crypto = require('crypto');
 const nodemailer = require('nodemailer');
-const jwt = require('express-jwt');
+const jwt = require('express-jwt');  
 
 const registracija = (req, res) => {
     if (!req.body.ime || !req.body.elektronskiNaslov || !req.body.geslo) {
@@ -30,7 +30,7 @@ const registracija = (req, res) => {
       }
     });
 };
-
+  
 const prijava = (req, res) => {
   if (!req.body.elektronskiNaslov || !req.body.geslo) {
     return res.status(400).json({"sporočilo": "Zahtevani so vsi podatki"});
@@ -51,7 +51,7 @@ const prijava = (req, res) => {
 var transporter = nodemailer.createTransport({
   service: 'hotmail',
   auth: {
-    user: 'stefi__stefan@hotmail.com',
+    user: process.env.HOTMAIL,
     pass: process.env.HOTMAILPW
   }
 });
@@ -70,10 +70,10 @@ const sendRecoveryEmail = (req, res) => {
       user.save().then((result) => {
         transporter.sendMail({
           to:user.elektronskiNaslov,
-          from:'"MySeat" <stefi__stefan@hotmail.com>',
+          from:'"MySeat"',  
           subject:"Password Reset", // CHANGE URL ON DEPLOY
           html:`<h3>You requested a password reset on MySeat</h3> 
-          <h3>Click on this <a href="https://myseat.onrender.com/reset/${resettoken}">link</a> to proceed, If this
+          <h3>Click on this <a href="https://myseat.fly.dev/reset/${resettoken}">link</a> to proceed, If this
           was not requested by you please take action and change your password</h3>
           <h3>The link will expire in 20 minutes`
         }) 

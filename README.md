@@ -119,7 +119,7 @@ A list of screen masks where the user can provide data and what data they can en
 ## 3. LP
 
 Heroku
-Link to the web application on heroku: https://myseat.onrender.com/ \
+Link to the web application on heroku: https://myseat.fly.dev/ \
 Application installation and launch: \
      * git clone: https://github.com/parch99/MySeat \
      * npm install -g heroku \
@@ -131,7 +131,7 @@ Application installation and launch: \
 
 SPA application on one side
 
-Link to the web application on render: https://myseat.onrender.com \
+Link to the web application on fly: https://myseat.fly.dev/ \
 Application installation and launch: \
      * git clone: https://github.com/parch99/MySeat \
      * npm install \

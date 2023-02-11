@@ -1,4 +1,4 @@
 export const environment = {
-  apiUrl: 'https://myseat.onrender.com/api',
+  apiUrl: 'https://myseat.fly.dev/api',
   production: true
 };

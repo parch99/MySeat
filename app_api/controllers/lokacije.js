@@ -5,13 +5,11 @@ const lokacijeSeznamPoRazdalji = (req, res) => {
     const lng = parseFloat(req.query.lng);
     const lat = parseFloat(req.query.lat);
     const razdalja = parseFloat(req.query.maxRazdalja);
-
     if (!lng || !lat) {
         return res.status(400).json({
             "sporočilo": "Parametra lng in lat sta obvezna."
         });
-    }
-
+    }  
     Lokacija
         .aggregate([{
             "$geoNear": {

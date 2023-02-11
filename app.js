@@ -1,6 +1,7 @@
 require('dotenv').config();
 var createError = require('http-errors');
 var express = require('express');
+var bodyParser = require('body-parser');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -28,7 +29,7 @@ var swaggerOptions = {
     },
     servers: [
       { url: "http://localhost:3000/api" },
-      { url: "https://myseat.onrender.com/api" }
+      { url: "https://myseat.fly.dev/api" }
     ]
   },
   apis: [
@@ -47,6 +48,11 @@ require('./app_api/konfiguracija/passport');
 var indexApi = require('./app_api/routes/index');
 
 var app = express();
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }));
+// parse application/json
+app.use(bodyParser.json());
 
 // Preusmeritev na HTTPS na Heroku
 if (process.env.NODE_ENV === 'production') {

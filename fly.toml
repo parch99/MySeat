@@ -1,6 +1,6 @@
-# fly.toml file generated for sp-edugeocache-mongodb on 2023-02-10T12:16:09+01:00
+# fly.toml file generated for myseat on 2023-02-10T16:10:16+01:00
 
-app = "sp-edugeocache-mongodb"
+app = "myseat"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
@@ -12,7 +12,7 @@ processes = []
 
 [[services]]
   http_checks = []
-  internal_port = 8080
+  internal_port = 3000
   processes = ["app"]
   protocol = "tcp"
   script_checks = []

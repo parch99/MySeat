@@ -4,7 +4,7 @@ var assert = require('assert');
 const lokacijeJSON = require('../../app_server/models/restaurants-mongodb.json');
 const uporabnikiJSON = require('../../app_server/models/users-mongodb.json');
 const nasloviJSON = require('../../app_server/models/emails-mongodb.json');
-
+//TEST
 const Lokacija = mongoose.model('Lokacija');
 const Uporabnik = mongoose.model('Uporabnik');
 const Naslov = mongoose.model('Naslov');

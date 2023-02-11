@@ -26,6 +26,7 @@ import { IzbrisiIdPipe } from './skupno/cevi/izbrisi-id.pipe';
 import { NotFoundComponentComponent } from './skupno/komponenti/not-found-component/not-found-component.component';
 import { AccountRecoveryComponent } from './skupno/komponenti/account-recovery/account-recovery.component';
 import { PasswordResetComponent } from './skupno/komponenti/password-reset/password-reset.component';
+//import { ServiceWorkerModule } from '@angular/service-worker';
 
 
 @NgModule({
@@ -58,6 +59,7 @@ import { PasswordResetComponent } from './skupno/komponenti/password-reset/passw
     ReactiveFormsModule,
     Ng2SearchPipeModule,
     AppUsmerjanjeModule
+    //ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [OgrodjeComponent]

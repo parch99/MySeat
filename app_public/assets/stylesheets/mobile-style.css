@@ -1,0 +1,78 @@
+@media only screen and (max-width: 768px) {
+   header .navbar-brand {
+      padding-left: 1rem;
+   }
+
+   header .row .col-md-5 img {
+      width: 100%;
+      height: 80%;
+   }
+
+   .section-1 .row .col-md-6 .panel {
+      position: relative;
+      width: initial;
+      height: initial;
+   }
+
+   .section-1 .row .col-md-7 .city img {
+      margin-left: -5vmin;
+      width: 135%;
+      border-radius: 0.2em;
+   }
+
+   .section-3 {
+      height: inherit;
+      padding: 5vmin !important;
+   }
+
+   .section-3 .row h1 {
+      padding: 6vmin 4vmin;
+   }
+
+   .section-3 .row .col-md-6 {
+      text-align: center !important;
+   }
+
+   .section-3 .desktop i {
+      font-size: 8vmin;
+   }
+
+   /* ABOUT US */
+   .about .section-4 .row .col-md-12>h2 {
+      color: whitesmoke;
+      font-size: 8vmin;
+      padding-top: 3vmin;
+   }
+
+   .about .section-4 .row .col-md-12>p {
+      padding: 1vmin 1vmin;
+   }
+
+   .about .section-5 .row .col-md-12>p {
+      font-size: 3vmin;
+      padding: 13vmin 13vmin;
+   }
+
+   /* ABOUT PAGE */
+   /* HOME USER */
+   main .recents .picker{
+      font-size: 5.5vmin;
+   }
+   /* HOME USER */
+   /* LIST PAGE */
+   .restaurant .text {
+      font-size: 5vmin;
+   }
+   .restaurant .sub-text {
+      font-size: 3.5vmin;
+   }
+   .restaurant .comment {
+      font-size: 4vmin;
+   }
+   /* LIST PAGE */
+   /* MAP PAGE */
+   .map #search {
+      font-size: 3.69vmin;
+   }
+   /* MAP PAGE */
+}

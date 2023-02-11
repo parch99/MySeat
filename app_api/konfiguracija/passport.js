@@ -37,7 +37,7 @@ passport.use(
 passport.use(new GoogleStrategy({
   clientID: process.env.CLIENT_ID,
   clientSecret: process.env.CLIENT_SECRET,
-  callbackURL: "https://myseat.onrender.com/api/google/callback",
+  callbackURL: "https://myseat.fly.dev/api/google/callback",
   profileFields: ["id", "displayName", "email"],
 },
 function(accessToken, refreshToken, profile, done) {
@@ -62,7 +62,7 @@ function(accessToken, refreshToken, profile, done) {
 passport.use(new FacebookStrategy({
   clientID: process.env.CLIENT_ID_FB,
   clientSecret: process.env.CLIENT_SECRET_FB,
-  callbackURL: "https://myseat.onrender.com/api/facebook/callback",
+  callbackURL: "https://myseat.fly.dev/api/facebook/callback",
   profileFields: ["id", "displayName", "email"],
 },
 function(accessToken, refreshToken, profile, done) {
