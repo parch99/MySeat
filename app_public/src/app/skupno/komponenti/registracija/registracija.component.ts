@@ -30,12 +30,7 @@ export class RegistracijaComponent implements OnInit {
   }
 
   public posiljanjePodatkov(): void {
-    this.napakaNaObrazcu = "";/*
-    const geslo = event.target.querySelector('#geslo').value;
-    const gesloVerify = event.target.querySelector('#gesloVerify').value;
-    if(geslo != gesloVerify){
-      this.napakaNaObrazcu = "Passwords do not match";
-    } */
+    this.napakaNaObrazcu = "";
     if (
       !this.prijavniPodatki.ime ||
       !this.prijavniPodatki.elektronskiNaslov ||

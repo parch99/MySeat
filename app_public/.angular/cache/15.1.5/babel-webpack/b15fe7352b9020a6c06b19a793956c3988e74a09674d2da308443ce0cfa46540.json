@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { InjectionToken } from '@angular/core';\nexport const SHRAMBA_BRSKALNIKA = new InjectionToken('Shramba brskalnika', {\n  providedIn: 'root',\n  factory: () => localStorage\n});","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}
